@@ -28,6 +28,9 @@ socialIcons:
     altText: Phone icon
     ariaLabel: Call Que Ricas (opens your native phone app)
     link: tel:+1-856-858-8500
+orderOnline:
+  visibleText: Order Online
+  link: https://www.clover.com/online-ordering/que-ricas
 contactInfo:
   phoneNumber: (856)-858-8500
   streetAddress: 46 A Haddon Ave
