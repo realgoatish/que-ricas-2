@@ -7,7 +7,10 @@
   import { stores } from "@sapper/app";
   const { page } = stores();
 
+  export let orderOnline;
+
   const navPages = [
+    { linkText: orderOnline.text, route: orderOnline.link },
     { linkText: "Home", route: "/" },
     { linkText: "Menu", route: "/menu" },
     { linkText: "Our Story", route: "/about" },
@@ -19,7 +22,7 @@
     showMobileMenu = !showMobileMenu;
   }
 
-  $: console.log(showMobileMenu);
+  $: console.log(orderOnline);
 </script>
 
 <nav>
@@ -130,14 +133,16 @@
 
     .nav__ul--desktop {
       display: flex;
+      flex-flow: column nowrap;
     }
 
     .nav__ul--desktop > * + * {
-      margin-left: 1rem;
+      margin: 1.4rem 0 0 0;
     }
     .nav__ul--desktop li {
       color: rgb(245, 124, 0);
       flex: 0 0 auto;
+      text-align: center;
     }
     .nav__ul--desktop a {
       border: 1px solid;
