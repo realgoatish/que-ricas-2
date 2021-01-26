@@ -29,7 +29,7 @@ socialIcons:
     ariaLabel: Call Que Ricas (opens your native phone app)
     link: tel:+1-856-858-8500
 orderOnline:
-  visibleText: Order Online
+  text: Order Online
   link: https://www.clover.com/online-ordering/que-ricas
 contactInfo:
   phoneNumber: (856)-858-8500
