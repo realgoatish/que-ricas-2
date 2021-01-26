@@ -32,7 +32,6 @@
 <style>
   main {
     font-size: 85%;
-    background-color: #fff;
   }
 
   @media (min-width: 400px) {
