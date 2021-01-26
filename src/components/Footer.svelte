@@ -10,6 +10,7 @@
 
 <style>
   footer {
+    background: #fff;
     border: 3px;
     border-color: #4f86f7;
     border-top-style: outset;
