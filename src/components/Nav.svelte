@@ -10,7 +10,6 @@
   export let orderOnline;
 
   const navPages = [
-    { linkText: orderOnline.text, route: orderOnline.link },
     { linkText: "Home", route: "/" },
     { linkText: "Menu", route: "/menu" },
     { linkText: "Our Story", route: "/about" },
@@ -22,11 +21,14 @@
     showMobileMenu = !showMobileMenu;
   }
 
-  $: console.log(orderOnline);
+  // $: console.log($page);
 </script>
 
 <nav>
   <ul class="nav__ul--desktop">
+    <li>
+      <a href={orderOnline.link}>{orderOnline.text}</a>
+    </li>
     {#each navPages as { linkText, route }}
       <li>
         <a class:selected={$page.path === route} rel="prefetch" href={route}
@@ -64,6 +66,9 @@
     </button>
     {#if showMobileMenu}
       <ul class="nav__ul--mobile" in:slide>
+        <li>
+          <a href={orderOnline.link}>{orderOnline.text}</a>
+        </li>
         {#each navPages as { linkText, route }}
           <li>
             <a rel="prefetch" href={route}>{linkText}</a>
