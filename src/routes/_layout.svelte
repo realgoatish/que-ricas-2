@@ -4,8 +4,6 @@
   import { stores } from "@sapper/app";
   const { page } = stores();
 
-  $: console.log($page);
-
   import { layout } from "../transformers";
   const [layoutContent] = layout;
 
