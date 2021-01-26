@@ -1,16 +1,22 @@
 <script>
   // export let segment
 
-  import {layout} from '../transformers'
-  const [layoutContent] = layout
+  import { layout } from "../transformers";
+  const [layoutContent] = layout;
 
-  import Header from './../components/Header.svelte'
-
+  import Header from "./../components/Header.svelte";
 </script>
+
+<main>
+  <Header {...layoutContent} />
+  <slot />
+</main>
 
 <style>
   main {
     font-size: 85%;
+    background-color: #fef9ef;
+    /* background-color: #eafdf8; */
   }
 
   @media (min-width: 400px) {
@@ -19,8 +25,3 @@
     }
   }
 </style>
-
-<main>
-  <Header {...layoutContent}/>
-  <slot></slot>
-</main>
