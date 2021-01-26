@@ -152,6 +152,33 @@ header p {
   text-align: center;
 }
 
+/* BEGIN CODE BLOCK FOR PINNING FOOTER TO BOTTOM OF PAGE */
+
+body,
+#sapper,
+main {
+  min-height: 100vh;
+}
+
+html {
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+/* END CODE BLOCK FOR PINNING FOOTER TO BOTTOM OF PAGE */
+
 .section-wrapper {
   padding: 1rem;
 }
