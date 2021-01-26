@@ -44,7 +44,6 @@
 
 <style>
   header {
-    background: #fff;
     border: 3px;
     border-color: #4f86f7;
     border-bottom-style: outset;
