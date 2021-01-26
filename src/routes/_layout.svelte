@@ -1,13 +1,16 @@
 <script>
   // export let segment
 
+  import Header from "./../components/Header.svelte";
+  import Footer from "./../components/Footer.svelte";
+
   import { stores } from "@sapper/app";
   const { page } = stores();
 
   import { layout } from "../transformers";
   const [layoutContent] = layout;
 
-  import Header from "./../components/Header.svelte";
+  const socialIcons = layoutContent.socialIcons;
 </script>
 
 <svelte:head>
@@ -23,6 +26,7 @@
 <main>
   <Header {...layoutContent} />
   <slot />
+  <Footer {socialIcons} />
 </main>
 
 <style>
