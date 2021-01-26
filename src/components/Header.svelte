@@ -1,5 +1,7 @@
 <script>
+  import Image from "./images/Image.svelte";
   import ImageLoader from "./images/ImageLoader.svelte";
+  import IntersectionObserver from "./images/IntersectionObserver.svelte";
   import Nav from "./Nav.svelte";
   import Social from "./Social.svelte";
 
@@ -11,7 +13,7 @@
   export let businessHours;
   // export let nav
 
-  // $: console.log(businessHours);
+  // $: console.log(orderOnline);
 </script>
 
 <header class="section-wrapper">
@@ -22,7 +24,7 @@
       <section class="header__contact-hours">
         <p>
           <a class="link__order-online" href={orderOnline.link}
-            >{orderOnline.visibleText}</a
+            >Click Here to {orderOnline.text}!</a
           >
         </p>
         <p>{contactInfo.phoneNumber}</p>
@@ -35,7 +37,7 @@
     </section>
 
     <section class="header-nav">
-      <Nav />
+      <Nav {orderOnline} />
     </section>
   </section>
 </header>
