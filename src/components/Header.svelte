@@ -45,8 +45,11 @@
 <style>
   header {
     background: #fff;
-    border-bottom-style: outset;
+    border: 3px;
     border-color: #4f86f7;
+    border-bottom-style: outset;
+    box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
+      0 1px 10px 0 rgb(0 0 0 / 12%);
   }
 
   section.container {
