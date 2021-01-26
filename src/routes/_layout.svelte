@@ -15,8 +15,7 @@
 <style>
   main {
     font-size: 85%;
-    background-color: #fef9ef;
-    /* background-color: #eafdf8; */
+    background-color: #fff;
   }
 
   @media (min-width: 400px) {
