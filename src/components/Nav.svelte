@@ -12,7 +12,7 @@
   const navPages = [
     { linkText: "Home", route: "/" },
     { linkText: "Menu", route: "/menu" },
-    { linkText: "Our Story", route: "/about" },
+    { linkText: "Our Story", route: "/story" },
   ];
 
   let showMobileMenu = false;
@@ -48,7 +48,8 @@
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
-        aria-hidden="true">
+        aria-hidden="true"
+      >
         {#if !showMobileMenu}
           <path
             d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
@@ -145,12 +146,12 @@
       margin: 1.4rem 0 0 0;
     }
     .nav__ul--desktop li {
-      color: rgb(245, 124, 0);
       flex: 0 0 auto;
       text-align: center;
     }
     .nav__ul--desktop a {
-      border: 1px solid;
+      color: #225a8c;
+      border: 1px solid rgb(245, 124, 0);
       padding: 0.7rem 2rem;
       border-radius: 2px;
       transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) background-color 1ms;

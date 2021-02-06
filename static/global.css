@@ -131,19 +131,27 @@ body {
   outline: none;
 }
 
-/* h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 0.5em 0;
-  font-weight: 400;
-  line-height: 1.2;
-} */
-
 figure {
   /* Safari hack to prevent bottom gap between figure and image */
   line-height: 0;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 175%;
+}
+
+h2 {
+  font-size: 150%;
+}
+
+h3 {
+  font-size: 125%;
+}
+
+h1,
+h2 {
+  color: #225a8c;
+  text-shadow: 1px 1px 2px #4f85f7;
 }
 
 a {
@@ -158,14 +166,32 @@ header p {
   text-align: center;
 }
 
-code {
-  font-family: menlo, inconsolata, monospace;
-  font-size: calc(1em - 2px);
-  color: #555;
-  background-color: #f0f0f0;
-  padding: 0.2em 0.4em;
-  border-radius: 2px;
+/* BEGIN CODE BLOCK FOR PINNING FOOTER TO BOTTOM OF PAGE */
+
+body,
+#sapper,
+main {
+  min-height: 100vh;
 }
+
+html {
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+/* END CODE BLOCK FOR PINNING FOOTER TO BOTTOM OF PAGE */
 
 .section-wrapper {
   padding: 1rem;
