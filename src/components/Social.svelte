@@ -1,9 +1,17 @@
 <script>
-  export let socialIcons
-  socialIcons = Object.values(socialIcons).reverse()
+  export let socialIcons;
+  socialIcons = Object.values(socialIcons).reverse();
 
   // $: console.log(socialIcons)
 </script>
+
+<section class="social-icons">
+  {#each socialIcons as icon}
+    <a href={icon.link}>
+      <img src={icon.image} alt={icon.altText} aria-label={icon.ariaLabel} />
+    </a>
+  {/each}
+</section>
 
 <style>
   a {
@@ -22,13 +30,4 @@
     justify-content: center;
     padding: 0.5rem 1rem;
   }
-
 </style>
-
-<section class="social-icons">
-  {#each socialIcons as icon}
-    <a href={icon.link}>
-      <img src={icon.image} alt={icon.altText} aria-label={icon.ariaLabel} />
-    </a>
-  {/each}
-</section>

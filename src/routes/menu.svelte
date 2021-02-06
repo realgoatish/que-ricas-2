@@ -1,1 +1,0 @@
-<article class="page-content" />

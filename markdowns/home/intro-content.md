@@ -1,12 +1,15 @@
 ---
 title: Honestly Delicious
 excerpt: content for homepage
-honestlyDeliciousImage: "./images/home/honestly-delicious.jpeg"
+foodImage: "./images/home/cartel-arepa.jpeg"
+foodImageAltText: "The Cartel Arepa"
+hdImage: "./images/home/honestly-delicious.jpeg"
+hdImageAltText: Honestly Delicious. Local. Better Ingredients. Authentic.
 
 ---
 <br>
 
-# Welcome to Que Ricas 
+# Authentic Venezuelan Cuisine 
 
 <br>
 

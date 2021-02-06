@@ -1,7 +1,5 @@
 <script>
-  import Image from "./images/Image.svelte";
   import ImageLoader from "./images/ImageLoader.svelte";
-  import IntersectionObserver from "./images/IntersectionObserver.svelte";
   import Nav from "./Nav.svelte";
   import Social from "./Social.svelte";
 
@@ -11,9 +9,6 @@
   export let orderOnline;
   export let contactInfo;
   export let businessHours;
-  // export let nav
-
-  // $: console.log(orderOnline);
 </script>
 
 <header class="section-wrapper">
@@ -62,7 +57,6 @@
     display: flex;
     flex-direction: column;
     width: 65%;
-    /* max-width:  */
   }
 
   .link__order-online {

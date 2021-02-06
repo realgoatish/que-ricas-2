@@ -137,7 +137,21 @@ figure {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 175%;
+}
+
+h2 {
+  font-size: 150%;
+}
+
+h3 {
+  font-size: 125%;
+}
+
+h1,
+h2 {
+  color: #225a8c;
+  text-shadow: 1px 1px 2px #4f85f7;
 }
 
 a {

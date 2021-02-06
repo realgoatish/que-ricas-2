@@ -1,5 +1,16 @@
+<script context="module">
+  export async function preload() {
+    const res = await this.fetch(`layout.json`);
+
+    const layout = await res.json();
+    return { layout };
+  }
+</script>
+
 <script>
-  // export let segment
+  export let segment;
+
+  // $: console.log(segment);
 
   import Header from "./../components/Header.svelte";
   import Footer from "./../components/Footer.svelte";
@@ -7,35 +18,29 @@
   import { stores } from "@sapper/app";
   const { page } = stores();
 
-  import { layout } from "../transformers";
+  export let layout;
+  // $: console.log(layout);
+
+  // $: console.log($page);
+
   const [layoutContent] = layout;
 
   const socialIcons = layoutContent.socialIcons;
 </script>
 
-<svelte:head>
-  {#if $page.path === "/"}
-    <title>Home</title>
-  {:else if $page.path === "/menu"}
-    <title>Menu</title>
-  {:else}
-    <title>About</title>
-  {/if}
-</svelte:head>
-
+<Header {...layoutContent} />
 <main>
-  <Header {...layoutContent} />
   <slot />
-  <Footer {socialIcons} />
 </main>
+<Footer {socialIcons} />
 
 <style>
-  main {
+  :global(body) {
     font-size: 85%;
   }
 
   @media (min-width: 400px) {
-    main {
+    :global(body) {
       font-size: 100%;
     }
   }
