@@ -109,7 +109,7 @@
   }
   .nav__section--mobile > * + * {
     /* this is meant to create visual symmetry between the hamburger menu icon, the mobile nav menu, and the header's bottom border.  Note that this number is different from the overall header's padding to account for some natural whitespace at the bottom of the hamburger menu icon */
-    padding-top: 1.2rem;
+    /* padding-top: 3rem; */
   }
 
   .nav__ul--mobile {
@@ -119,9 +119,15 @@
     text-align: right;
   }
 
+  .nav__ul--mobile li {
+    margin-top: 1.45rem;
+    border: 1px solid turquoise;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
   .nav__ul--mobile a {
     transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) background-color 1ms;
-    padding: 0.4rem 0rem 0.4rem 0.4rem;
+    padding: 0.6rem 0.4rem;
   }
 
   .nav__ul--mobile a:hover {
@@ -142,6 +148,9 @@
     .nav__ul--desktop {
       display: flex;
       flex-flow: column nowrap;
+      /* vertically center the desktop ul in relation to the header's left content. logo/social/contact section got taller late 
+      in the project due to need to save space at small screens. */
+      padding-top: 3rem;
     }
 
     .nav__ul--desktop > * + * {
@@ -154,7 +163,7 @@
     .nav__ul--desktop a {
       color: #225a8c;
       border: 1px solid rgb(245, 124, 0);
-      padding: 0.9rem 2rem 0.5rem 2rem;
+      padding: 0.7rem 2rem;
       /* line-height: 1.5; */
       border-radius: 2px;
       transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) background-color 1ms;
