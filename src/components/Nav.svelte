@@ -85,6 +85,8 @@
     text-decoration: none;
     text-transform: uppercase;
     display: block;
+
+    /* vertical-align: middle; */
   }
 
   button {
@@ -152,7 +154,8 @@
     .nav__ul--desktop a {
       color: #225a8c;
       border: 1px solid rgb(245, 124, 0);
-      padding: 0.7rem 2rem;
+      padding: 0.9rem 2rem 0.5rem 2rem;
+      /* line-height: 1.5; */
       border-radius: 2px;
       transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1) background-color 1ms;
     }
