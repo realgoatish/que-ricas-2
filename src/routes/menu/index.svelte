@@ -87,7 +87,7 @@
     width: 7rem;
     color: #225a8c;
     /* padding: 0.7rem 2rem; */
-    padding: 0.2rem;
+    padding: 0.5rem 0.2rem 0.2rem 0.2rem;
     margin-top: 0.7rem;
     border-radius: 2px;
     background-color: #fff;
