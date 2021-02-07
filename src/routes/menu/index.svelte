@@ -19,7 +19,7 @@
 
   const { page } = stores();
 
-  // $: console.log(menu);
+  $: console.log($currentSection);
 
   function showMenuSection() {
     currentSection.update((section) => this.value);
@@ -35,7 +35,7 @@
 />
 
 <article class="page-content">
-  <Card>
+  <Card stretch={$currentSection}>
     <h1>Our Menu</h1>
     <p>Click on each section below to view items</p>
     <section>
@@ -75,6 +75,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    /* height: 100vh; */
   }
 
   h1,
