@@ -93,7 +93,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 85%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -114,20 +114,19 @@ section {
 }
 
 @font-face {
-  font-family: "CooperHewitt-Book";
-  src: url("/fonts/cooper-hewitt/CooperHewitt-Book.eot") format("eot"),
-    url("/fonts/cooper-hewitt/CooperHewitt-Book.woff") format("woff"),
-    /* url("/fonts/beach-resort/Beach_Resort.ttf") format("truetype"), */
-      url("/fonts/cooper-hewitt/CooperHewitt-Book.svg#svgCooperHewitt-Book")
-      format("svg");
+  font-family: "FiraSansCondensed-Book";
+  src: url("/fonts/fira-sans/FiraSansCondensed-Book.eot") format("eot"),
+    url("/fonts/fira-sans/FiraSansCondensed-Book.woff2") format("woff2"),
+    url("/fonts/fira-sans/FiraSansCondensed-Book.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 body {
-  font-family: "CooperHewitt-Book", -apple-system, BlinkMacSystemFont, Segoe UI,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "FiraSansCondensed-Book", -apple-system, BlinkMacSystemFont,
+    Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
   line-height: 1.5;
   letter-spacing: 0.1ch;
   color: #333;
@@ -207,7 +206,7 @@ footer {
 /* END CODE BLOCK FOR PINNING FOOTER TO BOTTOM OF PAGE */
 
 .section-wrapper {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .container {
@@ -222,7 +221,7 @@ footer {
   }
 
   .section-wrapper {
-    padding: 2rem 2rem;
+    padding: 2rem 1.5rem;
   }
 }
 
