@@ -3,9 +3,6 @@
   import { layoutSEO } from "./../_helpers/stores.js";
   const { page } = stores();
 
-  $: console.log(`$page.path: ${$page.path}`);
-  $: console.log(`$page: ${$page}`);
-
   export let title = "test";
   export let description = "test";
   export let canonical = `https://${$page.host}${
@@ -17,9 +14,6 @@
   let siteName = "Que Ricas";
   let siteDescription =
     "Featuring the best Empanadas, Arepas, Pabellon Bowls, Churros, local specialties, gluten free and vegan options";
-
-  $: console.log(`siteUrl: ${siteUrl}`);
-  $: console.log(`canonical: ${canonical}`);
 
   let jsonld = {
     "@context": "https://schema.org",
