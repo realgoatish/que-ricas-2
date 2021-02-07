@@ -75,7 +75,6 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    /* height: 100vh; */
   }
 
   h1,
@@ -86,7 +85,6 @@
     border: 1px solid rgb(245, 124, 0);
     width: 7rem;
     color: #225a8c;
-    /* padding: 0.7rem 2rem; */
     padding: 0.2rem;
     margin-top: 0.7rem;
     border-radius: 2px;

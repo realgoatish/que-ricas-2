@@ -4,8 +4,6 @@
 
   import { stores } from "@sapper/app";
   const { page } = stores();
-
-  $: console.log(stretch);
 </script>
 
 <!-- apply the stretch class if `stretch` prop's default value hasn't been changed by the parent passing something else in.
