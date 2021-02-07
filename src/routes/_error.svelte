@@ -34,10 +34,10 @@
   /* @font-face kit by Fonts2u (https://fonts2u.com) */
   @font-face {
     font-family: "Beach Resort";
-    src: url("/fonts/Beach_Resort.eot?") format("eot"),
-      url("/fonts/Beach_Resort.woff") format("woff"),
-      url("/fonts/Beach_Resort.ttf") format("truetype"),
-      url("/fonts/Beach_Resort.svg#BeachResort") format("svg");
+    src: url("/fonts/beach-resort/Beach_Resort.eot?") format("eot"),
+      url("/fonts/beach-resort/Beach_Resort.woff") format("woff"),
+      url("/fonts/beach-resort/Beach_Resort.ttf") format("truetype"),
+      url("/fonts/beach-resort/Beach_Resort.svg#BeachResort") format("svg");
     font-weight: normal;
     font-style: normal;
   }
