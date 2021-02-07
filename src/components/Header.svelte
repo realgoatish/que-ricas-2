@@ -19,7 +19,7 @@
       <section class="header__contact-hours">
         <p>
           <a class="link__order-online" href={orderOnline.link}
-            >Click Here to {orderOnline.text}!</a
+            >{orderOnline.text}!</a
           >
         </p>
         <p>{contactInfo.phoneNumber}</p>
@@ -56,7 +56,7 @@
   .header__logo-social-contact {
     display: flex;
     flex-direction: column;
-    width: 65%;
+    width: 60%;
   }
 
   .link__order-online {
