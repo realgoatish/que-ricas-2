@@ -1,0 +1,13 @@
+---
+label: Menu Item - Platters (Styles)
+hide_body: false
+fields:
+- type: number
+  name: number
+  label: Order of Appearance
+- type: text
+  name: itemName
+  label: Item Name
+- type: textarea
+  name: description
+  label: Description

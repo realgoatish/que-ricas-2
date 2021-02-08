@@ -1,0 +1,13 @@
+---
+label: Menu Item - Sides & Extras
+hide_body: false
+fields:
+- type: number
+  name: number
+  label: Order of Appearance
+- type: text
+  name: itemName
+  label: Item Name
+- type: text
+  name: price
+  label: Price

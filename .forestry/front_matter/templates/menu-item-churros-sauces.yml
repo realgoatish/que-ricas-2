@@ -1,0 +1,10 @@
+---
+label: Menu Item - Churros (Sauces)
+hide_body: false
+fields:
+- type: number
+  name: number
+  label: Order of Appearance
+- type: text
+  name: itemName
+  label: Item Name

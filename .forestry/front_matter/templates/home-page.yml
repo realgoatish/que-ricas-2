@@ -1,0 +1,22 @@
+---
+label: Home Page
+hide_body: false
+fields:
+  - type: text
+    name: title
+    label: Title
+  - type: textarea
+    name: excerpt
+    label: excerpt
+  - type: file
+    name: foodImage
+    label: Food Image
+  - type: textarea
+    name: foodImageAltText
+    label: Food Image Alt Text
+  - type: file
+    name: hdImage
+    label: Content Image
+  - type: textarea
+    name: hdImageAltText
+    label: Content Image Alt Text
