@@ -1,12 +1,73 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: 
-webhook_url: 
-sections: 
-upload_dir: uploads
-public_path: "/uploads"
-front_matter_path: ''
+admin_path: "/static/admin"
+webhook_url:
+sections:
+  - type: heading
+    label: Home Page
+  - type: directory
+    path: markdowns/home
+    label: Intro Content
+    create: documents
+    match: "*.md"
+  - type: heading
+    label: Our Story Page
+  - type: directory
+    path: markdowns/story
+    label: Sahar & Dar Bios
+    create: documents
+    match: "*.md"
+  - type: heading
+    label: Menu Page
+  - type: directory
+    path: markdowns/menu/starters
+    label: Starters
+    create: documents
+    match: "*.md"
+  - type: directory
+    path: markdowns/menu/empanadas
+    label: Empanadas
+    create: documents
+    match: "*.md"
+  - type: directory
+    path: markdowns/menu/arepa-lab
+    label: Arepa Lab
+    create: documents
+    match: "*.md"
+  - type: directory
+    path: markdowns/menu/platters
+    label: Platters
+    create: documents
+    match: "**/*.md"
+  - type: directory
+    path: markdowns/menu/churros
+    label: Churros
+    create: documents
+    match: "**/*.md"
+  - type: directory
+    path: markdowns/menu/sides-and-extras
+    label: Sides and Extras
+    create: documents
+    match: "*.md"
+  - type: directory
+    path: markdowns/menu/drinks
+    label: Drinks
+    create: documents
+    match: "*.md"
+  - type: directory
+    path: markdowns/menu/specials
+    label: Specials
+    create: documents
+    match: "*.md"
+  - type: heading
+    label: Global Layout
+  - type: directory
+    path: markdowns/global
+    label: Header & Footer
+upload_dir: images
+public_path: "/images"
+front_matter_path: ""
 use_front_matter_path: false
 file_template: ":filename:"
 build:
