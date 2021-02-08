@@ -38,6 +38,8 @@
         <ImageLoader
           src={saharStory.image}
           alt={saharStory.altText}
+          width={"3024"}
+          height={"3024"}
           rounded={true}
         />
       </figure>
