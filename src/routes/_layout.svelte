@@ -10,8 +10,6 @@
 <script>
   export let segment;
 
-  // $: console.log(segment);
-
   import Header from "./../components/Header.svelte";
   import Footer from "./../components/Footer.svelte";
 
@@ -19,9 +17,6 @@
   const { page } = stores();
 
   export let layout;
-  // $: console.log(layout);
-
-  // $: console.log($page);
 
   const [layoutContent] = layout;
 
