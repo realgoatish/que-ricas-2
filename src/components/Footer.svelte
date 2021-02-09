@@ -6,7 +6,7 @@
 
 <footer>
   <div>
-    <Social {socialIcons} />
+    <Social {socialIcons} stacked={false} />
     <p>&copy Que Ricas - {new Date().getFullYear()}</p>
     <p><a href="sitemap.xml">Sitemap</a></p>
   </div>
