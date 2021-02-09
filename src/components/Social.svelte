@@ -1,51 +1,62 @@
 <script>
+  import ImageLoader from "./../components/images/ImageLoader.svelte";
+
   export let socialIcons;
   socialIcons = Object.values(socialIcons).reverse();
 
-  // $: console.log(socialIcons)
+  export let stacked = true;
+
+  $: console.log(socialIcons);
 </script>
 
-<div class="column">
+{#if stacked}
+  <div class="column">
+    <div class="social-icons">
+      {#each socialIcons as icon, i}
+        {#if i < 2}
+          <a href={icon.link}>
+            <ImageLoader
+              src={icon.image}
+              alt={icon.altText}
+              aria-label={icon.ariaLabel}
+              width={"24"}
+              height={"24"}
+            />
+          </a>
+        {/if}
+      {/each}
+    </div>
+    <div class="social-icons">
+      {#each socialIcons as icon, i}
+        {#if i > 1}
+          <a href={icon.link}>
+            <ImageLoader
+              src={icon.image}
+              alt={icon.altText}
+              aria-label={icon.ariaLabel}
+              width={icon.altText === "Email icon" ? "30" : "24"}
+              height={"24"}
+            />
+          </a>
+        {/if}
+      {/each}
+    </div>
+  </div>
+{:else}
   <div class="social-icons">
     {#each socialIcons as icon, i}
-      {#if i < 2}
-        <a href={icon.link}>
-          <img
-            src={icon.image}
-            alt={icon.altText}
-            aria-label={icon.ariaLabel}
-          />
-        </a>
-      {/if}
+      <a href={icon.link}>
+        <ImageLoader
+          src={icon.image}
+          alt={icon.altText}
+          aria-label={icon.ariaLabel}
+          width={icon.altText === "Email icon" ? "30" : "24"}
+          height={"24"}
+        />
+      </a>
     {/each}
   </div>
-  <div class="social-icons">
-    {#each socialIcons as icon, i}
-      {#if i > 1}
-        <a href={icon.link}>
-          <img
-            src={icon.image}
-            alt={icon.altText}
-            aria-label={icon.ariaLabel}
-          />
-        </a>
-      {/if}
-    {/each}
-  </div>
-  <!-- {#each socialIcons as other, i}
-    {#if i > 1}
-      <div class="social-icons">
-        <a href={other.link}>
-          <img
-            src={other.image}
-            alt={other.altText}
-            aria-label={other.ariaLabel}
-          />
-        </a>
-      </div>
-    {/if}
-  {/each} -->
-</div>
+{/if}
 
 <style>
   a {
