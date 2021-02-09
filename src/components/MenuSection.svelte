@@ -81,7 +81,13 @@
           {#if item.productImage}
             <figure class="figure__menu-item-image">
               <a href={item.productImage}>
-                <ImageLoader src={item.productImage} alt={""} rounded={true} />
+                <ImageLoader
+                  src={item.productImage}
+                  alt={item.altText}
+                  rounded={true}
+                  width={"2960"}
+                  height={"2960"}
+                />
               </a>
               <figcaption>
                 <p>
