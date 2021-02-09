@@ -14,7 +14,12 @@
 <header class="section-wrapper">
   <section class="container">
     <section class="header__logo-social-contact">
-      <ImageLoader src={logo.image} alt={logo.altText} />
+      <ImageLoader
+        src={logo.image}
+        alt={logo.altText}
+        width={"217"}
+        height={"53"}
+      />
       <Social {socialIcons} />
       <section class="header__contact-hours">
         <p>
