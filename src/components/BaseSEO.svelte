@@ -88,7 +88,7 @@
       },
       {
         "@type": "WebSite",
-        "@id": `${siteUrl}/#website`,
+        "@id": `${siteUrl}#website`,
         name: siteName,
         url: siteUrl,
         potentialAction: {
@@ -102,20 +102,20 @@
       },
       {
         "@type": "WebPage",
-        "@id": `${canonical}/#webpage`,
+        "@id": `${canonical}#webpage`,
         url: canonical,
         inLanguage: "en-US",
         name: `${title} | ${siteName}`,
         image: {
           "@type": "ImageObject",
-          "@id": `${canonical}/#primaryimage`,
+          "@id": `${canonical}#primaryimage`,
           url: image,
         },
         isPartOf: {
           "@id": `${siteUrl}/#website`,
         },
         primaryImageOfPage: {
-          "@id": `${canonical}/#primaryimage`,
+          "@id": `${canonical}#primaryimage`,
         },
         description: description,
         // breadcrumb: {
@@ -132,19 +132,19 @@
   if ($page.path === "/menu/" || $page.path === "/story/") {
     breadCrumbId = {
       breadcrumb: {
-        "@id": `${canonical}/#breadcrumb`,
+        "@id": `${canonical}#breadcrumb`,
       },
     };
     breadCrumbs = {
       "@type": "BreadcrumbList",
-      "@id": `${canonical}/#breadcrumb`,
+      "@id": `${canonical}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           item: {
             "@type": "WebPage",
-            "@id": `${siteUrl}/#webpage`,
+            "@id": `${siteUrl}#webpage`,
             url: `${siteUrl}`,
             name: `Home`,
           },
@@ -154,7 +154,7 @@
           position: 2,
           item: {
             "@type": "WebPage",
-            "@id": `${canonical}/#webpage`,
+            "@id": `${canonical}#webpage`,
             url: `${canonical}`,
             name: `${$page.path === "/menu/" ? "Menu" : "Story"}`,
           },
