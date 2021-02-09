@@ -190,7 +190,6 @@
 </script>
 
 <svelte:head>
-  <meta name="robots" content="noindex" />
   <title>{title}</title>
   <link rel="canonical" href={canonical} />
   <meta name="description" content={description} />
