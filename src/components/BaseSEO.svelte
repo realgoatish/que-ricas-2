@@ -35,7 +35,7 @@
         logo: {
           "@type": "ImageObject",
           "@id": `${siteUrl}/#logo`,
-          url: $layoutSEO.logo,
+          url: $layoutSEO.logo.image,
         },
         hasMenu: `${siteUrl}/menu/`,
         openingHoursSpecification: [
@@ -201,6 +201,5 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonical} />
-  <!-- <script type="application/ld+json">{jsonld}</script> -->
   {@html jsonldScript}
 </svelte:head>
