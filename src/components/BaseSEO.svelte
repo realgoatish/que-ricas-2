@@ -27,7 +27,7 @@
           "@id": `${siteUrl}/#logo`,
           url: $layoutSEO.logo,
         },
-        hasMenu: `${siteUrl}/menu`,
+        hasMenu: `${siteUrl}/menu/`,
         openingHoursSpecification: [
           {
             "@type": "OpeningHoursSpecification",
@@ -129,7 +129,7 @@
 
   let breadCrumbId = {};
 
-  if ($page.path === "/menu" || $page.path === "/story") {
+  if ($page.path === "/menu/" || $page.path === "/story/") {
     breadCrumbId = {
       breadcrumb: {
         "@id": `${canonical}/#breadcrumb`,
@@ -156,7 +156,7 @@
             "@type": "WebPage",
             "@id": `${canonical}/#webpage`,
             url: `${canonical}`,
-            name: `${$page.path === "/menu" ? "Menu" : "Story"}`,
+            name: `${$page.path === "/menu/" ? "Menu" : "Story"}`,
           },
         },
       ],
