@@ -92,7 +92,7 @@
     border: 1px solid rgb(245, 124, 0);
     width: 7rem;
     color: #225a8c;
-    padding: 0.2rem;
+    padding: 0.6rem 0.4rem;
     margin-top: 0.7rem;
     border-radius: 2px;
     background-color: #fff;

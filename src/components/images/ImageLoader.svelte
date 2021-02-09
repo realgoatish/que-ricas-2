@@ -4,6 +4,7 @@
   export let width;
   export let height;
   export let rounded;
+  export let ariaLabel;
   // export let figcaption
 
   import IntersectionObserver from "./IntersectionObserver.svelte";
@@ -12,6 +13,6 @@
 
 <IntersectionObserver once={true} let:intersecting>
   {#if intersecting}
-    <Image {alt} {src} {width} {height} {rounded} />
+    <Image {alt} {src} {ariaLabel} {width} {height} {rounded} />
   {/if}
 </IntersectionObserver>

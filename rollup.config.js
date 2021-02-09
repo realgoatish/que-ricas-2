@@ -107,7 +107,7 @@ export default {
 		onwarn,
 	},
 
-	serviceworker: {
+	serviceworker: !dev && {
 		input: config.serviceworker.input(),
 		output: config.serviceworker.output(),
 		plugins: [

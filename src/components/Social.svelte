@@ -49,7 +49,7 @@
         <ImageLoader
           src={icon.image}
           alt={icon.altText}
-          aria-label={icon.ariaLabel}
+          ariaLabel={icon.ariaLabel}
           width={icon.altText === "Email icon" ? "30" : "24"}
           height={"24"}
         />

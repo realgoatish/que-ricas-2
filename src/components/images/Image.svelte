@@ -4,6 +4,7 @@
   export let width;
   export let height;
   export let rounded;
+  export let ariaLabel;
 
   import { onMount } from "svelte";
 
@@ -22,6 +23,7 @@
   {alt}
   {width}
   {height}
+  {ariaLabel}
   class:loaded
   class:rounded
   bind:this={thisImage}
