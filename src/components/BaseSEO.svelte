@@ -2,6 +2,16 @@
   import { stores } from "@sapper/app";
   import { layoutSEO } from "./../_helpers/stores.js";
   const { page } = stores();
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    if (
+      document.querySelectorAll("script[type='application/ld+json']").length > 1
+    ) {
+      const test = document.querySelector("script[type='application/ld+json']");
+      test.parentNode.removeChild(test);
+    }
+  });
 
   export let title = "test";
   export let description = "test";
@@ -88,7 +98,7 @@
       },
       {
         "@type": "WebSite",
-        "@id": `${siteUrl}/#website`,
+        "@id": `${siteUrl}#website`,
         name: siteName,
         url: siteUrl,
         potentialAction: {
@@ -102,20 +112,20 @@
       },
       {
         "@type": "WebPage",
-        "@id": `${canonical}/#webpage`,
+        "@id": `${canonical}#webpage`,
         url: canonical,
         inLanguage: "en-US",
         name: `${title} | ${siteName}`,
         image: {
           "@type": "ImageObject",
-          "@id": `${canonical}/#primaryimage`,
+          "@id": `${canonical}#primaryimage`,
           url: image,
         },
         isPartOf: {
           "@id": `${siteUrl}/#website`,
         },
         primaryImageOfPage: {
-          "@id": `${canonical}/#primaryimage`,
+          "@id": `${canonical}#primaryimage`,
         },
         description: description,
         // breadcrumb: {
@@ -132,19 +142,19 @@
   if ($page.path === "/menu/" || $page.path === "/story/") {
     breadCrumbId = {
       breadcrumb: {
-        "@id": `${canonical}/#breadcrumb`,
+        "@id": `${canonical}#breadcrumb`,
       },
     };
     breadCrumbs = {
       "@type": "BreadcrumbList",
-      "@id": `${canonical}/#breadcrumb`,
+      "@id": `${canonical}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           item: {
             "@type": "WebPage",
-            "@id": `${siteUrl}/#webpage`,
+            "@id": `${siteUrl}#webpage`,
             url: `${siteUrl}`,
             name: `Home`,
           },
@@ -154,7 +164,7 @@
           position: 2,
           item: {
             "@type": "WebPage",
-            "@id": `${canonical}/#webpage`,
+            "@id": `${canonical}#webpage`,
             url: `${canonical}`,
             name: `${$page.path === "/menu/" ? "Menu" : "Story"}`,
           },
@@ -191,5 +201,6 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonical} />
+  <!-- <script type="application/ld+json">{jsonld}</script> -->
   {@html jsonldScript}
 </svelte:head>

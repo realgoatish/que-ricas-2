@@ -62,6 +62,13 @@
   </div>
 </article>
 
+<!-- <BaseSEO
+  title="Menu"
+  description="Our menu features empanadas, arepas, pabellon bowls, churros, local specialties, lunch specials, gluten free and vegan options"
+  canonical={`https://${$page.host}${$page.path}`}
+  image={menu.seo.image}
+  altText={menu.seo.altText}
+/> -->
 <style>
   div {
     display: none;
