@@ -6,11 +6,18 @@ import plattersContent from './../../../markdowns/menu/platters/**/*.md'
 import sidesAndExtrasContent from './../../../markdowns/menu/sides-and-extras/*.md'
 import specialsContent from './../../../markdowns/menu/specials/*.md'
 import startersContent from './../../../markdowns/menu/starters/*.md'
+// import { stores } from "@sapper/app";
+// const { page } = stores()
 
 
 function transform(menuSection) {
   let result = menuSection
-    .map(({ metadata }) => ({ ...metadata }))
+    .map(({ metadata }) => {
+      if (metadata.productImage) {
+        metadata.productImage = metadata.productImage.replace('.', 'https://www.que-ricas.com')
+      }
+      return ({ ...metadata })
+    })
     .sort((a, b) => (a.number > b.number ? 1 : -1))
   return result
 }
@@ -34,6 +41,12 @@ const allSections = [
   ...drinks,
   ...specials,
 ];
+
+// console.log(allSections)
+
+// allSections.forEach((x) => {
+//   if (x)
+// })
 
 
 function getTitle(section) {
