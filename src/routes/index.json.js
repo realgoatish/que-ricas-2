@@ -3,7 +3,6 @@ import { homePage } from './_home.js'
 let contents
 
 export function get(req, res) {
-  // const sahar = this.fetch('do stuff here to fetch')
 
   contents = JSON.stringify(homePage);
 
