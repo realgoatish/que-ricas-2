@@ -50,6 +50,8 @@
       <ImageLoader
         src={homepageContent.foodImage}
         alt={homepageContent.foodImageAltText}
+        width={"1024"}
+        height={"1024"}
       />
     </figure>
   {/if}
@@ -59,6 +61,8 @@
         <ImageLoader
           src={homepageContent.hdImage}
           alt={homepageContent.hdImageAltText}
+          width={"500"}
+          height={"188"}
         />
       </figure>
       <div class="text__article">

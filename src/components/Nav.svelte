@@ -20,8 +20,6 @@
   function handleMenuClicks(event) {
     showMobileMenu = !showMobileMenu;
   }
-
-  // $: console.log($page);
 </script>
 
 <nav>
@@ -31,7 +29,7 @@
     </li>
     {#each navPages as { linkText, route }}
       <li>
-        <a class:selected={$page.path === route} rel="prefetch" href={route}
+        <a class:selected={$page.path === route} sapper:prefetch href={route}
           >{linkText}</a
         >
       </li>
@@ -72,7 +70,7 @@
         </li>
         {#each navPages as { linkText, route }}
           <li>
-            <a rel="prefetch" href={route}>{linkText}</a>
+            <a sapper:prefetch href={route}>{linkText}</a>
           </li>
         {/each}
       </ul>

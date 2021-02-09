@@ -56,6 +56,8 @@
           src={darStory.image}
           alt={darStory.altText}
           rounded={true}
+          width={"453"}
+          height={"453"}
         />
       </figure>
       <div class="text__article">

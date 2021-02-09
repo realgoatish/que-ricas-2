@@ -1,4 +1,5 @@
 const fs = require('fs')
+// const probe = require('probe-image-size')
 
 const BASE_URL = "https://www.que-ricas.com"
 const pages = [""]
@@ -10,7 +11,6 @@ fs.readdirSync("./src/routes").forEach(file => {
   }
 })
 
-// console.log(pages)
 
 const getPageImages = (imageDir => {
   let result = []
@@ -22,6 +22,9 @@ const getPageImages = (imageDir => {
   })
   return result
 })
+
+// let data = fs.readFileSync('./static/images/global/que-ricas-logo.png');
+// console.log(probe.sync(data));
 
 
 const render = (pages) => `<?xml version="1.0" encoding="UTF-8" ?>
