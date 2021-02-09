@@ -2,6 +2,16 @@
   import { stores } from "@sapper/app";
   import { layoutSEO } from "./../_helpers/stores.js";
   const { page } = stores();
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    if (
+      document.querySelectorAll("script[type='application/ld+json']").length > 1
+    ) {
+      const test = document.querySelector("script[type='application/ld+json']");
+      test.parentNode.removeChild(test);
+    }
+  });
 
   export let title = "test";
   export let description = "test";
@@ -191,5 +201,6 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonical} />
+  <!-- <script type="application/ld+json">{jsonld}</script> -->
   {@html jsonldScript}
 </svelte:head>
