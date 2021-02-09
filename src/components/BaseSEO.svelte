@@ -13,16 +13,18 @@
     }
   });
 
+  $: console.log($page.path);
+
   export let title = "test";
   export let description = "test";
-  export let canonical = `https://${$page.host}${
-    $page.path === "/" ? "" : $page.path
-  }`;
+
   export let image = "test";
   export let altText = "test";
-  let siteUrl = `https://${$page.host}`;
-  let siteName = "Que Ricas";
-  let siteDescription =
+  const siteUrl = `https://${$page.host}/`;
+  export let canonical;
+  // $page.path === "/" ? siteUrl : `https://${$page.host}${$page.path}/`;
+  const siteName = "Que Ricas";
+  const siteDescription =
     "Featuring the best Empanadas, Arepas, Pabellon Bowls, Churros, local specialties, gluten free and vegan options";
 
   let jsonld = {
@@ -30,14 +32,14 @@
     "@graph": [
       {
         "@type": "Restaurant",
-        "@id": `${siteUrl}/#westmont`,
+        "@id": `${siteUrl}#westmont`,
         name: siteName,
         logo: {
           "@type": "ImageObject",
-          "@id": `${siteUrl}/#logo`,
+          "@id": `${siteUrl}#logo`,
           url: $layoutSEO.logo.image,
         },
-        hasMenu: `${siteUrl}/menu/`,
+        hasMenu: `${siteUrl}menu/`,
         openingHoursSpecification: [
           {
             "@type": "OpeningHoursSpecification",
@@ -87,7 +89,7 @@
           longitude: "-75.0538163",
         },
         image: {
-          "@id": `${siteUrl}/#logo`,
+          "@id": `${siteUrl}#logo`,
         },
         servesCuisine: ["Venezuelan", "South American"],
         priceRange: "$",
@@ -103,17 +105,17 @@
         url: siteUrl,
         potentialAction: {
           "@type": "SearchAction",
-          target: `${siteUrl}/?s={search_term_string}`,
+          target: `${siteUrl}?s={search_term_string}`,
           "query-input": "required name=search_term_string",
         },
         publisher: {
-          "@id": `${siteUrl}/#westmont`,
+          "@id": `${siteUrl}#westmont`,
         },
       },
       {
         "@type": "WebPage",
         "@id": `${canonical}#webpage`,
-        url: canonical,
+        url: `${canonical}`,
         inLanguage: "en-US",
         name: `${title} | ${siteName}`,
         image: {
@@ -122,7 +124,7 @@
           url: image,
         },
         isPartOf: {
-          "@id": `${siteUrl}/#website`,
+          "@id": `${siteUrl}#website`,
         },
         primaryImageOfPage: {
           "@id": `${canonical}#primaryimage`,
