@@ -11,8 +11,8 @@
 
   const navPages = [
     { linkText: "Home", route: "/" },
-    { linkText: "Menu", route: "/menu" },
-    { linkText: "Our Story", route: "/story" },
+    { linkText: "Menu", route: "/menu/" },
+    { linkText: "Our Story", route: "/story/" },
   ];
 
   let showMobileMenu = false;
