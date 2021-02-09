@@ -10,13 +10,15 @@
   Did it this way instead of just importing the `currentSection` store, because we only want this behavior when it's explicitly invoked, not for all instances of the Card component -->
 <div
   class="section-wrapper"
-  class:stretch={stretch === 0 && $page.path === "/menu"}
+  class:stretch={stretch === 0 && $page.path === "/menu/"}
 >
   <div class="container">
     <slot />
   </div>
 </div>
 
+<!-- apply the stretch class if `stretch` prop's default value hasn't been changed by the parent passing something else in.
+  Did it this way instead of just importing the `currentSection` store, because we only want this behavior when it's explicitly invoked, not for all instances of the Card component -->
 <style>
   .section-wrapper {
     background: #fff;
