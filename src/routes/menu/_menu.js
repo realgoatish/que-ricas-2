@@ -40,12 +40,6 @@ const allSections = [
   ...specials,
 ];
 
-// console.log(allSections)
-
-// allSections.forEach((x) => {
-//   if (x)
-// })
-
 
 function getTitle(section) {
   let result = section
