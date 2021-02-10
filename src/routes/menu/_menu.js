@@ -6,20 +6,14 @@ import plattersContent from './../../../markdowns/menu/platters/**/*.md'
 import sidesAndExtrasContent from './../../../markdowns/menu/sides-and-extras/*.md'
 import specialsContent from './../../../markdowns/menu/specials/*.md'
 import startersContent from './../../../markdowns/menu/starters/*.md'
-<<<<<<< Updated upstream
 const fs = require('fs')
-=======
->>>>>>> Stashed changes
 
 
 function transform(menuSection) {
   let result = menuSection
     .map(({ metadata }) => {
       if (metadata.productImage) {
-<<<<<<< Updated upstream
         metadata.productImageSlug = 
-=======
->>>>>>> Stashed changes
         metadata.productImage = metadata.productImage.replace('.', 'https://www.que-ricas.com/g')
       }
       return ({ ...metadata })

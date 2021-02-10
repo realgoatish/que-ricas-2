@@ -1,4 +1,6 @@
 import home from './../../markdowns/home/*.md'
+const fs = require('fs')
+
 
 export const homePage = home
   .map(({ metadata, html }) => {
