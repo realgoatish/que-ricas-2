@@ -1,4 +1,6 @@
 <script>
+  export let srcset;
+  export let sizes;
   export let src;
   export let alt;
   export let width;
@@ -19,6 +21,8 @@
 </script>
 
 <img
+  {srcset}
+  {sizes}
   {src}
   {alt}
   {width}

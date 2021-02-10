@@ -1,11 +1,12 @@
 <script>
+  export let srcset;
+  export let sizes;
   export let src;
   export let alt;
   export let width;
   export let height;
   export let rounded;
   export let ariaLabel;
-  // export let figcaption
 
   import IntersectionObserver from "./IntersectionObserver.svelte";
   import Image from "./Image.svelte";
@@ -13,6 +14,15 @@
 
 <IntersectionObserver once={true} let:intersecting>
   {#if intersecting}
-    <Image {alt} {src} {ariaLabel} {width} {height} {rounded} />
+    <Image
+      {srcset}
+      {sizes}
+      {src}
+      {alt}
+      {ariaLabel}
+      {width}
+      {height}
+      {rounded}
+    />
   {/if}
 </IntersectionObserver>
