@@ -13,8 +13,6 @@
     }
   });
 
-  $: console.log($page.path);
-
   export let title = "test";
   export let description = "test";
 

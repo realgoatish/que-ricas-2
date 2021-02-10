@@ -5,8 +5,6 @@
   socialIcons = Object.values(socialIcons).reverse();
 
   export let stacked = true;
-
-  $: console.log(socialIcons);
 </script>
 
 {#if stacked}

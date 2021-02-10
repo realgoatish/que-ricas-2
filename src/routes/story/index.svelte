@@ -16,8 +16,6 @@
 
   export let story;
 
-  // $: console.log(story);
-
   const [darStory, saharStory] = story;
 
   const { page } = stores();
