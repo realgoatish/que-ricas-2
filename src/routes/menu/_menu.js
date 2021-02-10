@@ -6,15 +6,15 @@ import plattersContent from './../../../markdowns/menu/platters/**/*.md'
 import sidesAndExtrasContent from './../../../markdowns/menu/sides-and-extras/*.md'
 import specialsContent from './../../../markdowns/menu/specials/*.md'
 import startersContent from './../../../markdowns/menu/starters/*.md'
-// import { stores } from "@sapper/app";
-// const { page } = stores()
+const fs = require('fs')
 
 
 function transform(menuSection) {
   let result = menuSection
     .map(({ metadata }) => {
       if (metadata.productImage) {
-        metadata.productImage = metadata.productImage.replace('.', 'https://www.que-ricas.com')
+        metadata.productImageSlug = 
+        metadata.productImage = metadata.productImage.replace('.', 'https://www.que-ricas.com/g')
       }
       return ({ ...metadata })
     })
