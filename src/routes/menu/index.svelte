@@ -19,8 +19,6 @@
 
   const { page } = stores();
 
-  $: console.log($currentSection);
-
   function showMenuSection() {
     currentSection.update((section) => this.value);
   }
