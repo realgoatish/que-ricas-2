@@ -1,5 +1,9 @@
 ---
 number: 0
 menuSectionTitle: Specials
-menuSectionPrimarySubtext: Our Specials Are Updated Daily
-menuSectionSecondarySubtext: "***Please note that the Sampler and Yo-Yos contain gluten"
+menuSectionPrimarySubtext: "Our specials are updated daily! 
+
+Any half-dozen empanadas for $15   
+
+Must mention special when ordering. Excludes dessert empanadas."
+menuSectionSecondarySubtext: "***Please note that the Sampler contains gluten"

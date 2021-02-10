@@ -30,7 +30,7 @@
 <section class:visible-block={$currentSection === headers.menuSectionTitle}>
   <h1>{headers.menuSectionTitle}</h1>
   {#if headers.menuSectionPrimarySubtext}
-    <p>{headers.menuSectionPrimarySubtext}</p>
+    <p class="pre-wrap">{headers.menuSectionPrimarySubtext}</p>
   {/if}
   {#if headers.menuSectionSecondarySubtext}
     <br />
@@ -54,7 +54,15 @@
           {#if item.productImage}
             <figure class="figure__menu-item-image">
               <a href={item.productImage}>
-                <ImageLoader src={item.productImage} alt={""} rounded={true} />
+                <!-- .split('') -->
+                <ImageLoader
+                  srcset={`
+                  ${item.productImage.substring(4, 0)}-400.webp 400w,
+                  ${item.productImage.substring(4, 0)}-400.jpeg `}
+                  src={item.productImage}
+                  alt={""}
+                  rounded={true}
+                />
               </a>
               <figcaption>
                 <p>
@@ -150,6 +158,10 @@
 
   .bold {
     font-weight: 600;
+  }
+
+  .pre-wrap {
+    white-space: pre-wrap;
   }
 
   /* Remove the branded colors/text-shadow and downsize h2's for certain menu sections. Our conditional rendering used the branded globally-styled h2's for Churros & Platters Step One & Step Two Sections. For Starters, Empanadas, Arepas, Drinks, Specials, we'll need h2's to serve the same presentational role that h3's served in Platters and Churros. This keeps both the HTML's semantic structure and the visual experience consistent */
