@@ -10,6 +10,7 @@ import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
+import image from 'svelte-image'
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -31,7 +32,20 @@ export default {
 				'process.browser': true,
 				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
-			svelte({
+      svelte({
+        preprocess: {
+          ...image({
+            quality: 75,
+            webp: true,
+            webpOptions: {
+              quality: 75,
+              lossless: false,
+              force: true
+            },
+            processFolders: ['images/story', 'images/menu', 'images/home'],
+            processFoldersSizes: [480, 800, 1200]
+          })
+        },
 				compilerOptions: {
 					dev,
 					hydratable: true
@@ -83,7 +97,20 @@ export default {
 				'process.browser': false,
 				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
-			svelte({
+      svelte({
+        preprocess: {
+          ...image({
+            quality: 75,
+            webp: true,
+            webpOptions: {
+              quality: 75,
+              lossless: false,
+              force: true
+            },
+            processFolders: ['images/story', 'images/menu', 'images/home'],
+            processFoldersSizes: [480, 800, 1200]
+          })
+        },
 				compilerOptions: {
 					dev,
 					generate: 'ssr',
