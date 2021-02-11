@@ -54,11 +54,10 @@
           {#if item.productImage}
             <figure class="figure__menu-item-image">
               <a href={item.productImage}>
-                <!-- .split('') -->
                 <ImageLoader
-                  srcset={`
-                  ${item.productImage.substring(4, 0)}-400.webp 400w,
-                  ${item.productImage.substring(4, 0)}-400.jpeg `}
+                  imageSlug={item.productImageSlug}
+                  srcset={item.allProductImages}
+                  sizes={item.productImageSizes}
                   src={item.productImage}
                   alt={""}
                   rounded={true}
@@ -90,11 +89,12 @@
             <figure class="figure__menu-item-image">
               <a href={item.productImage}>
                 <ImageLoader
+                  imageSlug={item.productImageSlug}
+                  srcset={item.allProductImages}
+                  sizes={item.productImageSizes}
                   src={item.productImage}
-                  alt={item.altText}
+                  alt={""}
                   rounded={true}
-                  width={"2960"}
-                  height={"2960"}
                 />
               </a>
               <figcaption>
@@ -127,6 +127,9 @@
               <figure class="figure__menu-item-image">
                 <a href={item.productImage}>
                   <ImageLoader
+                    imageSlug={item.productImageSlug}
+                    srcset={item.allProductImages}
+                    sizes={item.productImageSizes}
                     src={item.productImage}
                     alt={""}
                     rounded={true}
