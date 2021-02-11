@@ -67,6 +67,8 @@
       bind:this={thisImage}
       class:loaded
       class:rounded
+      {width}
+      {height}
       {src}
       {alt}
       srcset={imgSrcsetAttribute}

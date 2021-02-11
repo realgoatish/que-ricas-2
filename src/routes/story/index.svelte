@@ -16,8 +16,6 @@
 
   export let story;
 
-  $: console.log(story);
-
   const [darStory, saharStory] = story;
 
   const { page } = stores();
@@ -41,6 +39,8 @@
           sizes={saharStory.imageSizes}
           src={saharStory.image}
           alt={saharStory.altText}
+          width={"3024"}
+          height={"3024"}
           rounded={true}
         />
       </figure>
@@ -59,6 +59,8 @@
           sizes={darStory.imageSizes}
           src={darStory.image}
           alt={darStory.altText}
+          width={"453"}
+          height={"453"}
           rounded={true}
         />
       </figure>

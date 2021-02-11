@@ -16,8 +16,6 @@
 
   export let home;
 
-  $: console.log(home);
-
   const [homepageContent] = home;
 
   const { page } = stores();
@@ -45,6 +43,8 @@
           sizes={homepageContent.allFoodImageSizes}
           src={homepageContent.foodImage}
           alt={homepageContent.foodImageAltText}
+          width={"1024"}
+          height={"1024"}
           rounded={true}
         />
       </figure>
@@ -57,6 +57,8 @@
         sizes={homepageContent.allFoodImageSizes}
         src={homepageContent.foodImage}
         alt={homepageContent.foodImageAltText}
+        width={"1024"}
+        height={"1024"}
         rounded={true}
       />
     </figure>
@@ -70,6 +72,8 @@
           sizes={homepageContent.allHdImageSizes}
           src={homepageContent.hdImage}
           alt={homepageContent.hdImageAltText}
+          width={"500"}
+          height={"188"}
           rounded={true}
         />
       </figure>
