@@ -39,6 +39,7 @@
     <section>
       {#each menu.titles as title}
         <button
+          name={title}
           class:selected={$currentSection === title}
           on:click={showMenuSection}
           value={title}>{title}</button
