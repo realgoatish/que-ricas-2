@@ -1,4 +1,5 @@
 <script>
+  export let imageSlug;
   export let srcset;
   export let sizes;
   export let src;
@@ -15,6 +16,7 @@
 <IntersectionObserver once={true} let:intersecting>
   {#if intersecting}
     <Image
+      {imageSlug}
       {srcset}
       {sizes}
       {src}

@@ -16,6 +16,8 @@
 
   export let home;
 
+  $: console.log(home);
+
   const [homepageContent] = home;
 
   const { page } = stores();
@@ -38,20 +40,24 @@
     <Card>
       <figure class="figure__hero-image">
         <ImageLoader
+          imageSlug={homepageContent.foodImageSlug}
+          srcset={homepageContent.allFoodImages}
+          sizes={homepageContent.allFoodImageSizes}
           src={homepageContent.foodImage}
           alt={homepageContent.foodImageAltText}
-          width={"1024"}
-          height={"1024"}
+          rounded={true}
         />
       </figure>
     </Card>
   {:else}
     <figure class="figure__hero-image">
       <ImageLoader
+        imageSlug={homepageContent.foodImageSlug}
+        srcset={homepageContent.allFoodImages}
+        sizes={homepageContent.allFoodImageSizes}
         src={homepageContent.foodImage}
         alt={homepageContent.foodImageAltText}
-        width={"1024"}
-        height={"1024"}
+        rounded={true}
       />
     </figure>
   {/if}
@@ -59,10 +65,12 @@
     <section>
       <figure class="figure__image">
         <ImageLoader
+          imageSlug={homepageContent.hdImageSlug}
+          srcset={homepageContent.allHdImages}
+          sizes={homepageContent.allHdImageSizes}
           src={homepageContent.hdImage}
           alt={homepageContent.hdImageAltText}
-          width={"500"}
-          height={"188"}
+          rounded={true}
         />
       </figure>
       <div class="text__article">
