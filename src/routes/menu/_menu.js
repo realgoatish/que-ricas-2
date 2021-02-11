@@ -6,17 +6,46 @@ import plattersContent from './../../../markdowns/menu/platters/**/*.md'
 import sidesAndExtrasContent from './../../../markdowns/menu/sides-and-extras/*.md'
 import specialsContent from './../../../markdowns/menu/specials/*.md'
 import startersContent from './../../../markdowns/menu/starters/*.md'
+const fs = require('fs')
 
 
 function transform(menuSection) {
   let result = menuSection
     .map(({ metadata }) => {
       if (metadata.productImage) {
+
+        let splitPath = metadata.productImage.split('/')
+        metadata.productImageSlug = splitPath[splitPath.length - 1]
+          .split('.')[0]
+        
+        metadata.allProductImages = []
+        
+        fs.readdirSync(`./static/g/images/menu`).forEach(file => {
+          if (file.includes(metadata.productImageSlug)) {
+            metadata.allProductImages.push(file)
+          }
+        })
+
+        metadata.productImageSizes = getImageSizes(metadata.allProductImages, ["400", "800", "1200"])
+        
+        
         metadata.productImage = metadata.productImage.replace('.', 'https://www.que-ricas.com/g')
       }
       return ({ ...metadata })
     })
     .sort((a, b) => (a.number > b.number ? 1 : -1))
+  return result
+}
+
+function getImageSizes(arr, sizesArr) {
+  let result = []
+  sizesArr.forEach((size) => {
+    arr.forEach((file) => {
+      if (file.includes(size) && !result.includes(size)) {
+        result.push(size)
+      }
+    })
+  })
   return result
 }
 
