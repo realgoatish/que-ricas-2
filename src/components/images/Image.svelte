@@ -9,19 +9,12 @@
   export let rounded;
   export let ariaLabel;
 
-  // let media = [
-  //   "(max-width: 600px)",
-  //   "(max-width: 1000x)",
-  //   "(max-width:"
-  // ]
-
   import { onMount } from "svelte";
 
   let loaded = false;
   let thisImage;
-  // let thisPicture;
-  // let thisError;
-  // let progress;
+  let imgSizesAttribute;
+  let imgSrcsetAttribute;
 
   onMount(() => {
     if (thisImage) {
@@ -30,18 +23,35 @@
       };
     }
   });
+
+  if (sizes) {
+    imgSizesAttribute = sizes
+      .map((size) => {
+        return `(${
+          size === "1200" ? "min" : "max"
+        }-width: ${size}px) ${size}px`;
+      })
+      .join(", ");
+  }
+  if (srcset) {
+    imgSrcsetAttribute = sizes
+      .map((size) => {
+        return (
+          src.replace(`${imageSlug}.jpeg`, `${imageSlug}-${size}.jpeg`) +
+          ` ${size}w`
+        );
+      })
+      .join(", ");
+  }
 </script>
 
 {#if srcset && sizes}
-  <!-- <picture bind:this={thisPicture} class:loaded> -->
   <picture>
     {#each sizes as size}
       <source
         type="image/webp"
         media={`
-          (${
-            sizes.indexOf(size) === sizes.length - 1 ? "min" : "max"
-          }-width: ${size}px)`}
+          (${size === "1200" ? "min" : "max"}-width: ${size}px)`}
         srcset={src.replace(`${imageSlug}.jpeg`, `${imageSlug}-${size}.webp`)}
       />
     {/each}
@@ -49,13 +59,19 @@
       <source
         type="image/jpeg"
         media={`
-          (${
-            sizes.indexOf(size) === sizes.length - 1 ? "min" : "max"
-          }-width: ${size}px)`}
+          (${size === "1200" ? "min" : "max"}-width: ${size}px)`}
         srcset={src.replace(`${imageSlug}.jpeg`, `${imageSlug}-${size}.jpeg`)}
       />
     {/each}
-    <img bind:this={thisImage} class:loaded class:rounded {src} {alt} />
+    <img
+      bind:this={thisImage}
+      class:loaded
+      class:rounded
+      {src}
+      {alt}
+      srcset={imgSrcsetAttribute}
+      sizes={imgSizesAttribute}
+    />
   </picture>
 {:else}
   <img
