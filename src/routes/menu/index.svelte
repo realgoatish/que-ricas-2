@@ -17,8 +17,6 @@
 
   export let menu;
 
-  $: console.log(menu);
-
   const { page } = stores();
 
   function showMenuSection() {
