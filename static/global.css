@@ -123,7 +123,7 @@ section {
   font-display: swap;
 } */
 
-body {
+/* body {
   font-family: "FiraSansCondensed-Book", -apple-system, BlinkMacSystemFont,
     Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
@@ -137,7 +137,7 @@ body {
   background-position-y: 50%;
   background-size: cover;
   background-repeat: no-repeat;
-}
+} */
 
 :focus {
   outline: none;
