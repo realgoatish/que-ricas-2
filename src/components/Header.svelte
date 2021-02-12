@@ -12,8 +12,8 @@
 </script>
 
 <header class="section-wrapper">
-  <section class="container">
-    <section class="header__logo-social-contact">
+  <div class="container">
+    <div class="header__logo-social-contact">
       <ImageLoader
         src={logo.image}
         alt={logo.altText}
@@ -21,7 +21,7 @@
         height={"53"}
       />
       <Social {socialIcons} />
-      <section class="header__contact-hours">
+      <div class="header__contact-hours">
         <p>
           <a class="link__order-online" href={orderOnline.link}
             >{orderOnline.text}!</a
@@ -33,13 +33,13 @@
         {#each businessHours as item}
           <p>{item}</p>
         {/each}
-      </section>
-    </section>
+      </div>
+    </div>
 
-    <section class="header-nav">
+    <div class="header-nav">
       <Nav {orderOnline} />
-    </section>
-  </section>
+    </div>
+  </div>
 </header>
 
 <style>
@@ -52,7 +52,7 @@
       0 1px 10px 0 rgb(0 0 0 / 12%);
   }
 
-  section.container {
+  div.container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
