@@ -45,7 +45,7 @@
     <button
       aria-haspopup="true"
       aria-expanded={showMobileMenu}
-      name="hamburger menu"
+      aria-label="hamburger menu"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
