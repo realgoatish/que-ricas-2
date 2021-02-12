@@ -92,7 +92,7 @@
     border: 3px;
     border-color: #4f86f7;
     border-bottom-style: outset;
-    min-height: 55vh;
+    min-height: 43vh;
   }
 
   .figure__image {
@@ -114,7 +114,7 @@
 
   @media (min-width: 960px) {
     .figure__hero-image {
-      min-height: 60vh;
+      min-height: 52vh;
     }
   }
 </style>
