@@ -39,7 +39,7 @@
     <section>
       {#each menu.titles as title}
         <button
-          name={title}
+          aria-label={`Click to reveal menu items from the ${title} section below`}
           class:selected={$currentSection === title}
           on:click={showMenuSection}
           value={title}>{title}</button
