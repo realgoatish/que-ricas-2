@@ -73,7 +73,6 @@
     font-family: "FiraSansCondensed-Book", -apple-system, BlinkMacSystemFont,
       Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif;
-    /* font-size: 85%; */
     line-height: 1.5;
     letter-spacing: 0.1ch;
     color: #333;
