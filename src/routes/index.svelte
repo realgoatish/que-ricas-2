@@ -39,12 +39,11 @@
       <figure class="figure__hero-image">
         <ImageLoader
           imageSlug={homepageContent.foodImageSlug}
-          srcset={homepageContent.allFoodImages}
-          sizes={homepageContent.allFoodImageSizes}
+          allImages={homepageContent.allFoodImages}
+          processedImageSizes={homepageContent.allFoodImageSizes}
           src={homepageContent.foodImage}
           alt={homepageContent.foodImageAltText}
-          width={"1024"}
-          height={"1024"}
+          sizes={`(max-width: 960px) 100vw, (min-width: 961px) 90vw, (min-width: 1150px) 1166px`}
           rounded={true}
         />
       </figure>
@@ -53,8 +52,8 @@
     <figure class="figure__hero-image">
       <ImageLoader
         imageSlug={homepageContent.foodImageSlug}
-        srcset={homepageContent.allFoodImages}
-        sizes={homepageContent.allFoodImageSizes}
+        allImages={homepageContent.allFoodImages}
+        processedImageSizes={homepageContent.allFoodImageSizes}
         src={homepageContent.foodImage}
         alt={homepageContent.foodImageAltText}
         width={"1024"}
@@ -68,8 +67,8 @@
       <figure class="figure__image">
         <ImageLoader
           imageSlug={homepageContent.hdImageSlug}
-          srcset={homepageContent.allHdImages}
-          sizes={homepageContent.allHdImageSizes}
+          allImages={homepageContent.allHdImages}
+          processedImageSizes={homepageContent.allHdImageSizes}
           src={homepageContent.hdImage}
           alt={homepageContent.hdImageAltText}
           width={"500"}
@@ -95,6 +94,7 @@
     border: 3px;
     border-color: #4f86f7;
     border-bottom-style: outset;
+    min-height: 55vh;
   }
 
   .figure__image {
@@ -111,6 +111,12 @@
   @media (min-width: 400px) {
     .figure__hero-image {
       border: none;
+    }
+  }
+
+  @media (min-width: 960px) {
+    .figure__hero-image {
+      min-height: 60vh;
     }
   }
 </style>
