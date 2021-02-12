@@ -8,7 +8,7 @@ export const homePage = home
 
 
       let splitFoodImagePath = metadata.foodImage.split('/')
-      let splitHdImagePath = metadata.foodImage.split('/')
+      let splitHdImagePath = metadata.hdImage.split('/')
 
       metadata.foodImageSlug = splitFoodImagePath[splitFoodImagePath.length - 1]
         .split('.')[0]
