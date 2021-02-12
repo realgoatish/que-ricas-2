@@ -131,7 +131,7 @@ body {
   letter-spacing: 0.1ch;
   color: #333;
   overflow-x: hidden;
-  background-image: url("https://res.cloudinary.com/caribou-images/image/upload/q_auto,f_auto/palm-tree-background.jpg");
+  background-image: url("/g/images/background-image/palm-tree-background-800.jpg");
   background-attachment: fixed;
   background-position-x: 50%;
   background-position-y: 50%;
