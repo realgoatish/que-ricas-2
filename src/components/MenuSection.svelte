@@ -56,9 +56,10 @@
               <a href={item.productImage}>
                 <ImageLoader
                   imageSlug={item.productImageSlug}
-                  srcset={item.allProductImages}
-                  sizes={item.productImageSizes}
+                  allImages={item.allProductImages}
+                  processedImageSizes={item.productImageSizes}
                   src={item.productImage}
+                  sizes={"160px"}
                   alt={""}
                   rounded={true}
                 />
@@ -90,9 +91,10 @@
               <a href={item.productImage}>
                 <ImageLoader
                   imageSlug={item.productImageSlug}
-                  srcset={item.allProductImages}
-                  sizes={item.productImageSizes}
+                  allImages={item.allProductImages}
+                  processedImageSizes={item.productImageSizes}
                   src={item.productImage}
+                  sizes={"160px"}
                   alt={""}
                   rounded={true}
                 />
@@ -128,9 +130,10 @@
                 <a href={item.productImage}>
                   <ImageLoader
                     imageSlug={item.productImageSlug}
-                    srcset={item.allProductImages}
-                    sizes={item.productImageSizes}
+                    allImages={item.allProductImages}
+                    processedImageSizes={item.productImageSizes}
                     src={item.productImage}
+                    sizes={"160px"}
                     alt={""}
                     rounded={true}
                   />

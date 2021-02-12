@@ -35,12 +35,11 @@
       <figure class="image__article sahar">
         <ImageLoader
           imageSlug={saharStory.imageSlug}
-          srcset={saharStory.allImages}
-          sizes={saharStory.imageSizes}
+          allImages={saharStory.allImages}
+          processedImageSizes={saharStory.imageSizes}
           src={saharStory.image}
           alt={saharStory.altText}
-          width={"3024"}
-          height={"3024"}
+          sizes={`(min-width: 1530px) 466px, (min-width: 960px) 27vw, (min-width: 10px) 38vw`}
           rounded={true}
         />
       </figure>
@@ -55,12 +54,11 @@
       <figure class="image__article dar">
         <ImageLoader
           imageSlug={darStory.imageSlug}
-          srcset={darStory.allImages}
-          sizes={darStory.imageSizes}
+          allImages={darStory.allImages}
+          processedImageSizes={darStory.imageSizes}
           src={darStory.image}
           alt={darStory.altText}
-          width={"453"}
-          height={"453"}
+          sizes={`(min-width: 1530px) 466px, (min-width: 960px) 27vw, (min-width: 10px) 38vw`}
           rounded={true}
         />
       </figure>

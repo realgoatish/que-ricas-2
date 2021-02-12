@@ -1,7 +1,8 @@
 <script>
   export let imageSlug;
-  export let srcset;
+  export let allImages;
   export let sizes;
+  export let processedImageSizes;
   export let src;
   export let alt;
   export let width;
@@ -17,10 +18,11 @@
   {#if intersecting}
     <Image
       {imageSlug}
-      {srcset}
-      {sizes}
+      {allImages}
+      {processedImageSizes}
       {src}
       {alt}
+      {sizes}
       {ariaLabel}
       {width}
       {height}

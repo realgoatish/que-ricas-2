@@ -1,6 +1,7 @@
 <script>
   export let imageSlug;
-  export let srcset;
+  export let allImages;
+  export let processedImageSizes;
   export let sizes;
   export let src;
   export let alt;
@@ -13,8 +14,6 @@
 
   let loaded = false;
   let thisImage;
-  let imgSizesAttribute;
-  let imgSrcsetAttribute;
 
   onMount(() => {
     if (thisImage) {
@@ -24,56 +23,38 @@
     }
   });
 
-  if (sizes) {
-    imgSizesAttribute = sizes
-      .map((size) => {
-        return `(${
-          size === "1200" ? "min" : "max"
-        }-width: ${size}px) ${size}px`;
-      })
-      .join(", ");
-  }
-  if (srcset) {
-    imgSrcsetAttribute = sizes
-      .map((size) => {
-        return (
-          src.replace(`${imageSlug}.jpeg`, `${imageSlug}-${size}.jpeg`) +
-          ` ${size}w`
-        );
-      })
-      .join(", ");
+  if (processedImageSizes) {
+    processedImageSizes.reverse();
   }
 </script>
 
-{#if srcset && sizes}
+{#if allImages && processedImageSizes}
   <picture>
-    {#each sizes as size}
+    {#each processedImageSizes as size}
       <source
         type="image/webp"
         media={`
-          (${size === "1200" ? "min" : "max"}-width: ${size}px)`}
-        srcset={src.replace(`${imageSlug}.jpeg`, `${imageSlug}-${size}.webp`)}
+          (min-width: ${size === "400" ? "10" : size}px)`}
+        srcset={src.replace(
+          `${imageSlug}.jpeg`,
+          `${imageSlug}-${size}.webp ${size}w`
+        )}
+        {sizes}
       />
     {/each}
-    {#each sizes as size}
+    {#each processedImageSizes as size}
       <source
         type="image/jpeg"
         media={`
-          (${size === "1200" ? "min" : "max"}-width: ${size}px)`}
-        srcset={src.replace(`${imageSlug}.jpeg`, `${imageSlug}-${size}.jpeg`)}
+          (min-width: ${size === "400" ? "10" : size}px)`}
+        srcset={src.replace(
+          `${imageSlug}.jpeg`,
+          `${imageSlug}-${size}.jpeg ${size}w`
+        )}
+        {sizes}
       />
     {/each}
-    <img
-      bind:this={thisImage}
-      class:loaded
-      class:rounded
-      {width}
-      {height}
-      {src}
-      {alt}
-      srcset={imgSrcsetAttribute}
-      sizes={imgSizesAttribute}
-    />
+    <img bind:this={thisImage} class:loaded class:rounded {src} {alt} />
   </picture>
 {:else}
   <img
