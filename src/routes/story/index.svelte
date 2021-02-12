@@ -39,8 +39,7 @@
           processedImageSizes={saharStory.imageSizes}
           src={saharStory.image}
           alt={saharStory.altText}
-          width={"3024"}
-          height={"3024"}
+          sizes={`(min-width: 1530px) 466px, (min-width: 960px) 27vw, (min-width: 10px) 38vw`}
           rounded={true}
         />
       </figure>
@@ -59,8 +58,7 @@
           processedImageSizes={darStory.imageSizes}
           src={darStory.image}
           alt={darStory.altText}
-          width={"453"}
-          height={"453"}
+          sizes={`(min-width: 1530px) 466px, (min-width: 960px) 27vw, (min-width: 10px) 38vw`}
           rounded={true}
         />
       </figure>

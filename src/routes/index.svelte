@@ -56,8 +56,7 @@
         processedImageSizes={homepageContent.allFoodImageSizes}
         src={homepageContent.foodImage}
         alt={homepageContent.foodImageAltText}
-        width={"1024"}
-        height={"1024"}
+        sizes={`(max-width: 960px) 100vw, (min-width: 961px) 90vw, (min-width: 1150px) 1166px`}
         rounded={true}
       />
     </figure>
@@ -71,8 +70,7 @@
           processedImageSizes={homepageContent.allHdImageSizes}
           src={homepageContent.hdImage}
           alt={homepageContent.hdImageAltText}
-          width={"500"}
-          height={"188"}
+          sizes={`(max-width: 400px) 100vw, (min-width: 480px) 480px`}
           rounded={true}
         />
       </figure>
