@@ -30,6 +30,9 @@
 <Footer {socialIcons} />
 
 <style>
+  :global(main) {
+    min-height: 100vh;
+  }
   :global(body) {
     font-size: 85%;
   }
