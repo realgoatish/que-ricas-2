@@ -54,15 +54,7 @@
         {sizes}
       />
     {/each}
-    <img
-      bind:this={thisImage}
-      class:loaded
-      class:rounded
-      {src}
-      {alt}
-      {width}
-      {height}
-    />
+    <img bind:this={thisImage} class:loaded class:rounded {src} {alt} />
   </picture>
 {:else}
   <img
