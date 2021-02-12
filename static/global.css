@@ -113,7 +113,7 @@ section {
   display: block;
 }
 
-@font-face {
+/* @font-face {
   font-family: "FiraSansCondensed-Book";
   src: url("/fonts/fira-sans/FiraSansCondensed-Book.eot") format("eot"),
     url("/fonts/fira-sans/FiraSansCondensed-Book.woff2") format("woff2"),
@@ -121,7 +121,7 @@ section {
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 body {
   font-family: "FiraSansCondensed-Book", -apple-system, BlinkMacSystemFont,
