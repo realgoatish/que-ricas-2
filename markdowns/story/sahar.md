@@ -1,7 +1,7 @@
 ---
 title: Story Sahar
 excerpt: Autobiographical section for Sahar
-image: ./images/story/sahar.jpeg
+image: ./images/story/sahar.jpg
 altText: Sahar Soleymani, owner and head chef
 ---
 Sahar Soleymani learned her way around the kitchen at an early age, as much of her home life was centered on the pride and tradition that came with preparing food of her rich Venezuelan heritage.  <br><br>

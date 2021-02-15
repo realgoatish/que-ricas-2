@@ -36,7 +36,7 @@
         media={`
           (min-width: ${size === "400" ? "10" : size}px)`}
         srcset={src.replace(
-          `${imageSlug}.jpeg`,
+          `${imageSlug}.jpg`,
           `${imageSlug}-${size}.webp ${size}w`
         )}
         {sizes}
@@ -48,8 +48,8 @@
         media={`
           (min-width: ${size === "400" ? "10" : size}px)`}
         srcset={src.replace(
-          `${imageSlug}.jpeg`,
-          `${imageSlug}-${size}.jpeg ${size}w`
+          `${imageSlug}.jpg`,
+          `${imageSlug}-${size}.jpg ${size}w`
         )}
         {sizes}
       />
