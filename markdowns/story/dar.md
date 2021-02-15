@@ -1,7 +1,7 @@
 ---
 title: Story Dar
 excerpt: Autobiographical section for Dar
-image: "./images/story/dar-and-elsie.jpeg"
+image: "./images/story/dar-and-elsie.jpg"
 altText: Dar Soleymani with his wife Elsie
 ---
 With the hopes of finding the American dream, Dar Soleymani came to the United States in the late 70’s as a student where he met his beautiful South American wife Elsie.  The rest was history!  <br><br>
