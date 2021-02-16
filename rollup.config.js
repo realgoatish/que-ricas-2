@@ -33,21 +33,19 @@ export default {
 				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
       svelte({
-        preprocess: {
-          ...image({
-            quality: 85,
-            webp: true,
-            webpOptions: {
-              quality: 90,
-              lossless: false,
-              force: true
-            },
-            processFolders: ['images/menu'],
-            processFoldersSizes: [400]
-            // processFolders: ['images/story', 'images/menu', 'images/home'],
-            // processFoldersSizes: [480, 800, 1200]
-          })
-        },
+        // preprocess: {
+        //   ...image({
+        //     quality: 75,
+        //     webp: true,
+        //     webpOptions: {
+        //       quality: 75,
+        //       lossless: false,
+        //       force: true
+        //     },
+        //     processFolders: ['images/story', 'images/menu', 'images/home'],
+        //     processFoldersSizes: [480, 800, 1200]
+        //   })
+        // },
 				compilerOptions: {
 					dev,
 					hydratable: true
@@ -102,17 +100,15 @@ export default {
       svelte({
         preprocess: {
           ...image({
-            quality: 85,
+            quality: 75,
             webp: true,
             webpOptions: {
-              quality: 90,
+              quality: 75,
               lossless: false,
               force: true
             },
-            processFolders: ['images/menu'],
-            processFoldersSizes: [400]
-            // processFolders: ['images/story', 'images/menu', 'images/home'],
-            // processFoldersSizes: [480, 800, 1200]
+            processFolders: ['images/story', 'images/menu', 'images/home'],
+            processFoldersSizes: [480, 800, 1200]
           })
         },
 				compilerOptions: {
