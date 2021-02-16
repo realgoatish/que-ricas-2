@@ -1,4 +1,9 @@
 <script>
+  import ImageWrapper from './ImageWrapper.svelte'
+  
+  import { onMount } from "svelte";
+
+  export let thumbnail;
   export let imageSlug;
   export let allImages;
   export let processedImageSizes;
@@ -10,15 +15,16 @@
   export let rounded;
   export let ariaLabel;
 
-  import { onMount } from "svelte";
-
   let loaded = false;
   let thisImage;
+  let currentSrc;
+
 
   onMount(() => {
     if (thisImage) {
       thisImage.onload = () => {
         loaded = true;
+        currentSrc = thisImage.currentSrc
       };
     }
   });
@@ -28,46 +34,49 @@
   }
 </script>
 
-{#if allImages && processedImageSizes}
-  <picture>
-    {#each processedImageSizes as size}
-      <source
-        type="image/webp"
-        media={`
-          (min-width: ${size === "400" ? "10" : size}px)`}
-        srcset={src.replace(
-          `${imageSlug}.jpg`,
-          `${imageSlug}-${size}.webp ${size}w`
-        )}
-        {sizes}
-      />
-    {/each}
-    {#each processedImageSizes as size}
-      <source
-        type="image/jpeg"
-        media={`
-          (min-width: ${size === "400" ? "10" : size}px)`}
-        srcset={src.replace(
-          `${imageSlug}.jpg`,
-          `${imageSlug}-${size}.jpg ${size}w`
-        )}
-        {sizes}
-      />
-    {/each}
-    <img bind:this={thisImage} class:loaded class:rounded {src} {alt} />
-  </picture>
-{:else}
-  <img
-    {src}
-    {alt}
-    {width}
-    {height}
-    {ariaLabel}
-    class:loaded
-    class:rounded
-    bind:this={thisImage}
-  />
-{/if}
+<ImageWrapper {currentSrc} {thumbnail}>
+  <!-- ^ ImageWrapper component only wraps the slot content below in an <a> tag if thumbnail={true} was passed from parent/page, otherwise it just renders this component unchanged through a bare <slot> -->
+  {#if allImages && processedImageSizes}
+    <picture>
+      {#each processedImageSizes as size}
+        <source
+          type="image/webp"
+          media={`
+            (min-width: ${size === "400" ? "10" : size}px)`}
+          srcset={src.replace(
+            `${imageSlug}.jpg`,
+            `${imageSlug}-${size}.webp ${size}w`
+          )}
+          {sizes}
+        />
+      {/each}
+      {#each processedImageSizes as size}
+        <source
+          type="image/jpeg"
+          media={`
+            (min-width: ${size === "400" ? "10" : size}px)`}
+          srcset={src.replace(
+            `${imageSlug}.jpg`,
+            `${imageSlug}-${size}.jpg ${size}w`
+          )}
+          {sizes}
+        />
+      {/each}
+      <img bind:this={thisImage} class:loaded class:rounded {src} {alt} />
+    </picture>
+  {:else}
+    <img
+      {src}
+      {alt}
+      {width}
+      {height}
+      {ariaLabel}
+      class:loaded
+      class:rounded
+      bind:this={thisImage}
+    />
+  {/if}
+</ImageWrapper>
 
 <style>
   img {
