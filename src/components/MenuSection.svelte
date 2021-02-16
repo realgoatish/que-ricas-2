@@ -53,17 +53,16 @@
           <!-- Display item's image if it has one -->
           {#if item.productImage}
             <figure class="figure__menu-item-image">
-              <a href={item.productImage}>
-                <ImageLoader
-                  imageSlug={item.productImageSlug}
-                  allImages={item.allProductImages}
-                  processedImageSizes={item.productImageSizes}
-                  src={item.productImage}
-                  sizes={"160px"}
-                  alt={""}
-                  rounded={true}
-                />
-              </a>
+              <ImageLoader
+                thumbnail={true}
+                imageSlug={item.productImageSlug}
+                allImages={item.allProductImages}
+                processedImageSizes={item.productImageSizes}
+                src={item.productImage}
+                sizes={"160px"}
+                alt={""}
+                rounded={true}
+              />
               <figcaption>
                 <p>
                   {item.itemName}
@@ -88,17 +87,16 @@
           <!-- Image container will go here w/ its own class -->
           {#if item.productImage}
             <figure class="figure__menu-item-image">
-              <a href={item.productImage}>
-                <ImageLoader
-                  imageSlug={item.productImageSlug}
-                  allImages={item.allProductImages}
-                  processedImageSizes={item.productImageSizes}
-                  src={item.productImage}
-                  sizes={"160px"}
-                  alt={""}
-                  rounded={true}
-                />
-              </a>
+              <ImageLoader
+                thumbnail={true}
+                imageSlug={item.productImageSlug}
+                allImages={item.allProductImages}
+                processedImageSizes={item.productImageSizes}
+                src={item.productImage}
+                sizes={"160px"}
+                alt={""}
+                rounded={true}
+              />
               <figcaption>
                 <p>
                   <span class="bold">Protein:</span>
@@ -127,17 +125,16 @@
             <!-- Display item's image if it has one -->
             {#if item.productImage}
               <figure class="figure__menu-item-image">
-                <a href={item.productImage}>
-                  <ImageLoader
-                    imageSlug={item.productImageSlug}
-                    allImages={item.allProductImages}
-                    processedImageSizes={item.productImageSizes}
-                    src={item.productImage}
-                    sizes={"160px"}
-                    alt={""}
-                    rounded={true}
-                  />
-                </a>
+                <ImageLoader
+                  thumbnail={true}
+                  imageSlug={item.productImageSlug}
+                  allImages={item.allProductImages}
+                  processedImageSizes={item.productImageSizes}
+                  src={item.productImage}
+                  sizes={"160px"}
+                  alt={""}
+                  rounded={true}
+                />
                 <figcaption>
                   <p>
                     {item.itemName}
