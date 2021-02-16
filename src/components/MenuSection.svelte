@@ -100,10 +100,15 @@
               <figcaption>
                 <p>
                   <span class="bold">Protein:</span>
+                  <br>
                   {item.productImageProtein}
                 </p>
                 <!-- <br /> -->
-                <p><span class="bold">Style:</span> {item.productImageStyle}</p>
+                <p>
+                  <span class="bold">Style:</span> 
+                  <br>
+                  {item.productImageStyle}
+                </p>
               </figcaption>
             </figure>
           {/if}
@@ -160,7 +165,7 @@
   }
 
   .bold {
-    font-weight: 600;
+    font-weight: 800;
   }
 
   .pre-wrap {
@@ -184,7 +189,7 @@
     display: flex;
     justify-content: space-between;
     flex-flow: row nowrap;
-    line-height: 1.75;
+    line-height: 1.5;
     padding: 10px 0 10px;
   }
 
@@ -205,5 +210,6 @@
 
   figcaption {
     line-height: 1.5;
+    font-size: 90%;
   }
 </style>
