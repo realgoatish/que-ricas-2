@@ -4,6 +4,8 @@ itemName: 'Chicha '
 price: "$3.75"
 description: 'Creamy, sweet rice milk drink garnished with condensed milk and ground
   cinnamon '
+productImage: ./images/menu/oreo-chicha.jpg
+altText: "Oreo Chicha"
 addOn: ''
 
 ---
