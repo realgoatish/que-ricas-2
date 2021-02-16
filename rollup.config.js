@@ -35,15 +35,17 @@ export default {
       svelte({
         preprocess: {
           ...image({
-            quality: 75,
+            quality: 85,
             webp: true,
             webpOptions: {
-              quality: 75,
-              lossless: false,
+              quality: 85,
+              lossless: true,
               force: true
             },
-            processFolders: ['images/story', 'images/menu', 'images/home'],
-            processFoldersSizes: [480, 800, 1200]
+            // processFolders: ['images/story', 'images/menu', 'images/home'],
+            // processFoldersSizes: [480, 800, 1200]
+            processFolders: ['images/menu'],
+            processFoldersSizes: [480]
           })
         },
 				compilerOptions: {
@@ -100,15 +102,17 @@ export default {
       svelte({
         preprocess: {
           ...image({
-            quality: 75,
+            quality: 85,
             webp: true,
             webpOptions: {
-              quality: 75,
-              lossless: false,
+              quality: 85,
+              lossless: true,
               force: true
             },
-            processFolders: ['images/story', 'images/menu', 'images/home'],
-            processFoldersSizes: [480, 800, 1200]
+            // processFolders: ['images/story', 'images/menu', 'images/home'],
+            // processFoldersSizes: [480, 800, 1200]
+            processFolders: ['images/menu'],
+            processFoldersSizes: [480]
           })
         },
 				compilerOptions: {
