@@ -3,3 +3,7 @@
 /src/node_modules/@sapper/
 yarn-error.log
 /__sapper__/
+/static/g/images/home/
+# /static/g/images/menu/
+/static/g/images/story/
+
