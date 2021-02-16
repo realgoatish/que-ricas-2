@@ -5,7 +5,7 @@
 
 </script>
 
-{#if currentSrc && thumbnail}
+{#if thumbnail}
   <a href={currentSrc}>
     <slot></slot>
   </a>
