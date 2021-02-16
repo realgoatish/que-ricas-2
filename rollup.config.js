@@ -38,14 +38,14 @@ export default {
             quality: 85,
             webp: true,
             webpOptions: {
-              quality: 85,
-              lossless: true,
+              quality: 90,
+              lossless: false,
               force: true
             },
+            processFolders: ['images/menu'],
+            processFoldersSizes: [400]
             // processFolders: ['images/story', 'images/menu', 'images/home'],
             // processFoldersSizes: [480, 800, 1200]
-            processFolders: ['images/menu'],
-            processFoldersSizes: [480]
           })
         },
 				compilerOptions: {
@@ -105,14 +105,14 @@ export default {
             quality: 85,
             webp: true,
             webpOptions: {
-              quality: 85,
-              lossless: true,
+              quality: 90,
+              lossless: false,
               force: true
             },
+            processFolders: ['images/menu'],
+            processFoldersSizes: [400]
             // processFolders: ['images/story', 'images/menu', 'images/home'],
             // processFoldersSizes: [480, 800, 1200]
-            processFolders: ['images/menu'],
-            processFoldersSizes: [480]
           })
         },
 				compilerOptions: {
