@@ -60,7 +60,7 @@
                 processedImageSizes={item.productImageSizes}
                 src={item.productImage}
                 sizes={"160px"}
-                alt={""}
+                alt={item.altText}
                 rounded={true}
               />
               <figcaption>
@@ -132,14 +132,14 @@
                   processedImageSizes={item.productImageSizes}
                   src={item.productImage}
                   sizes={"160px"}
-                  alt={""}
+                  alt={item.altText}
                   rounded={true}
                 />
-                <figcaption>
+                <!-- <figcaption>
                   <p>
                     {item.itemName}
                   </p>
-                </figcaption>
+                </figcaption> -->
               </figure>
             {/if}
           </div>
