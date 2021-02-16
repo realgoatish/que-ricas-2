@@ -1,4 +1,8 @@
 <script>
+  import IntersectionObserver from "./IntersectionObserver.svelte";
+  import Image from "./Image.svelte";
+
+  export let thumbnail;
   export let imageSlug;
   export let allImages;
   export let sizes;
@@ -10,13 +14,12 @@
   export let rounded;
   export let ariaLabel;
 
-  import IntersectionObserver from "./IntersectionObserver.svelte";
-  import Image from "./Image.svelte";
 </script>
 
 <IntersectionObserver once={true} let:intersecting>
   {#if intersecting}
     <Image
+      {thumbnail}
       {imageSlug}
       {allImages}
       {processedImageSizes}
