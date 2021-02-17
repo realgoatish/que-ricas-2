@@ -30,7 +30,7 @@
 <Footer {socialIcons} />
 
 <style>
-  :global(body) {
+  /* :global(body) {
     font-size: 85%;
   }
 
@@ -38,5 +38,5 @@
     :global(body) {
       font-size: 100%;
     }
-  }
+  } */
 </style>
