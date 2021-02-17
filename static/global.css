@@ -220,16 +220,20 @@ footer {
 }
 
 @media (min-width: 400px) {
-  :root {
-    font-size: 118%;
-  }
 
   .section-wrapper {
     padding: 2rem 1.5rem;
   }
 }
 
+@media (min-width: 600px) {
+  :root {
+    font-size: 118%;
+  }
+}
+
 @media (min-width: 960px) {
+
   .section-wrapper {
     padding: 2rem 6rem;
   }
