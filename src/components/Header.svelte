@@ -61,7 +61,7 @@
   .header__logo-social-contact {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 55%;
   }
 
   .link__order-online {
@@ -69,7 +69,7 @@
     text-decoration: underline;
   }
 
-  @media (min-width: 400px) {
+  @media (min-width: 600px) {
     .header__logo-social-contact {
       width: 14rem;
     }

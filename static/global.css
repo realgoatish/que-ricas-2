@@ -5,12 +5,12 @@
 }
 
 :root {
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(0.8rem + 0.5vw);
 }
 
-:root {
+/* :root {
   font-size: 95%;
-}
+} */
 
 html,
 body,
@@ -228,7 +228,7 @@ footer {
 
 @media (min-width: 600px) {
   :root {
-    font-size: 118%;
+    font-size: 110%;
   }
 }
 
