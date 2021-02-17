@@ -8,9 +8,9 @@
   font-size: calc(0.8rem + 0.5vw);
 }
 
-/* :root {
-  font-size: 95%;
-} */
+:root {
+  font-size: 105%;
+}
 
 html,
 body,
