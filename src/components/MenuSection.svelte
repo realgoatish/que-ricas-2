@@ -63,11 +63,11 @@
                 alt={item.altText}
                 rounded={true}
               />
-              <figcaption>
+              <!-- <figcaption>
                 <p>
                   {item.itemName}
                 </p>
-              </figcaption>
+              </figcaption> -->
             </figure>
           {/if}
         </div>
@@ -94,22 +94,21 @@
                 processedImageSizes={item.productImageSizes}
                 src={item.productImage}
                 sizes={"160px"}
-                alt={""}
+                alt={item.altText}
                 rounded={true}
               />
-              <figcaption>
+              <!-- <figcaption>
                 <p>
                   <span class="bold">Protein:</span>
                   <br>
                   {item.productImageProtein}
                 </p>
-                <!-- <br /> -->
                 <p>
                   <span class="bold">Style:</span> 
                   <br>
                   {item.productImageStyle}
                 </p>
-              </figcaption>
+              </figcaption> -->
             </figure>
           {/if}
         </div>
@@ -189,7 +188,7 @@
     display: flex;
     justify-content: space-between;
     flex-flow: row nowrap;
-    line-height: 1.5;
+    line-height: 1.75;
     padding: 10px 0 10px;
   }
 
@@ -208,8 +207,8 @@
     margin: auto 0;
   }
 
-  figcaption {
+  /* figcaption {
     line-height: 1.5;
     font-size: 90%;
-  }
+  } */
 </style>

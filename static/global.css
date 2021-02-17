@@ -8,6 +8,10 @@
   font-size: calc(1rem + 0.5vw);
 }
 
+:root {
+  font-size: 85%;
+}
+
 html,
 body,
 div,
@@ -94,7 +98,7 @@ video {
   padding: 0;
   border: 0;
   font: inherit;
-  font-size: 102%;
+  /* font-size: 102%; */
   vertical-align: baseline;
 }
 
@@ -217,7 +221,7 @@ footer {
 
 @media (min-width: 400px) {
   :root {
-    font-size: 100%;
+    font-size: 118%;
   }
 
   .section-wrapper {
