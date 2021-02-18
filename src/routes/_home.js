@@ -12,9 +12,13 @@ export const homePage = home
 
       metadata.foodImageSlug = splitFoodImagePath[splitFoodImagePath.length - 1]
         .split('.')[0]
+      metadata.foodImageExtension = splitFoodImagePath[splitFoodImagePath.length - 1]
+        .split('.')[1]
       
       metadata.hdImageSlug = splitHdImagePath[splitHdImagePath.length - 1]
         .split('.')[0]
+      metadata.hdImageExtension = splitHdImagePath[splitHdImagePath.length - 1]
+        .split('.')[1]
       
       metadata.allFoodImages = []
 
