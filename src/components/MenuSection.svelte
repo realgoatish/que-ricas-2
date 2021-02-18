@@ -1,5 +1,6 @@
 <script>
   import ImageLoader from "./images/ImageLoader.svelte";
+  import DietIcons from "./images/DietIcons.svelte";
   import { currentSection } from "./../_helpers/stores";
 
   export let info;
@@ -45,6 +46,11 @@
         <div class="div__menu-item">
           <div class:div__menu-item-text={item.productImage}>
             <h3>{item.itemName}</h3>
+            {#if item.glutenFree || item.vegan}
+              <div class="div__diet-icons-wrapper">
+                <DietIcons {item} />
+              </div>
+            {/if}
             <p>{item.price}</p>
             {#if item.description}
               <p>{item.description}</p>
@@ -56,6 +62,7 @@
               <ImageLoader
                 thumbnail={true}
                 imageSlug={item.productImageSlug}
+                imageExtension={item.productImageExtension}
                 allImages={item.allProductImages}
                 processedImageSizes={item.productImageSizes}
                 src={item.productImage}
@@ -63,11 +70,6 @@
                 alt={item.altText}
                 rounded={true}
               />
-              <!-- <figcaption>
-                <p>
-                  {item.itemName}
-                </p>
-              </figcaption> -->
             </figure>
           {/if}
         </div>
@@ -80,6 +82,11 @@
         <div class="div__menu-item">
           <div class:div__menu-item-text={item.productImage}>
             <h3>{item.itemName}</h3>
+            {#if item.glutenFree || item.vegan}
+              <div class="div__diet-icons-wrapper">
+                <DietIcons {item} />
+              </div>
+            {/if}
             {#if item.description}
               <p>{item.description}</p>
             {/if}
@@ -90,6 +97,7 @@
               <ImageLoader
                 thumbnail={true}
                 imageSlug={item.productImageSlug}
+                imageExtension={item.productImageExtension}
                 allImages={item.allProductImages}
                 processedImageSizes={item.productImageSizes}
                 src={item.productImage}
@@ -97,18 +105,6 @@
                 alt={item.altText}
                 rounded={true}
               />
-              <!-- <figcaption>
-                <p>
-                  <span class="bold">Protein:</span>
-                  <br>
-                  {item.productImageProtein}
-                </p>
-                <p>
-                  <span class="bold">Style:</span> 
-                  <br>
-                  {item.productImageStyle}
-                </p>
-              </figcaption> -->
             </figure>
           {/if}
         </div>
@@ -121,6 +117,11 @@
           <div class="div__menu-item">
             <div class:div__menu-item-text={item.productImage}>
               <h2 class="h2__menu--downsize">{item.itemName}</h2>
+              {#if item.glutenFree || item.vegan}
+                <div class="div__diet-icons-wrapper">
+                  <DietIcons {item} />
+                </div>
+              {/if}
               <p>{item.price}</p>
               {#if item.description}
                 <p>{item.description}</p>
@@ -132,6 +133,7 @@
                 <ImageLoader
                   thumbnail={true}
                   imageSlug={item.productImageSlug}
+                  imageExtension={item.productImageExtension}
                   allImages={item.allProductImages}
                   processedImageSizes={item.productImageSizes}
                   src={item.productImage}
@@ -139,11 +141,6 @@
                   alt={item.altText}
                   rounded={true}
                 />
-                <!-- <figcaption>
-                  <p>
-                    {item.itemName}
-                  </p>
-                </figcaption> -->
               </figure>
             {/if}
           </div>
@@ -183,6 +180,10 @@
     font-weight: 500;
   }
 
+  .div__diet-icons-wrapper {
+    width: 3rem;
+  }
+
   .div__menu-item {
     text-align: left;
     display: flex;
@@ -197,9 +198,14 @@
     border-color: #eae7db;
   }
 
+  .div__menu-item p {
+    max-width: 60ch;
+  }
+
   .figure__menu-item-image {
     width: 40%;
     max-width: 10rem;
+    margin: auto 0;
   }
 
   .div__menu-item-text {
@@ -207,8 +213,4 @@
     margin: auto 0;
   }
 
-  /* figcaption {
-    line-height: 1.5;
-    font-size: 90%;
-  } */
 </style>
