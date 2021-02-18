@@ -39,6 +39,7 @@
       <figure class="figure__hero-image">
         <ImageLoader
           imageSlug={homepageContent.foodImageSlug}
+          imageExtension={homepageContent.foodImageExtension}
           allImages={homepageContent.allFoodImages}
           processedImageSizes={homepageContent.allFoodImageSizes}
           src={homepageContent.foodImage}
@@ -52,6 +53,7 @@
     <figure class="figure__hero-image">
       <ImageLoader
         imageSlug={homepageContent.foodImageSlug}
+        imageExtension={homepageContent.foodImageExtension}
         allImages={homepageContent.allFoodImages}
         processedImageSizes={homepageContent.allFoodImageSizes}
         src={homepageContent.foodImage}
@@ -66,6 +68,7 @@
       <figure class="figure__image">
         <ImageLoader
           imageSlug={homepageContent.hdImageSlug}
+          imageExtension={homepageContent.hdImageExtension}
           allImages={homepageContent.allHdImages}
           processedImageSizes={homepageContent.allHdImageSizes}
           src={homepageContent.hdImage}
