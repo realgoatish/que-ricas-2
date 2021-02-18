@@ -6,3 +6,5 @@ productImage: ./images/menu/caracas.jpg
 altText: "Chicken Caracas Platter"
 productImageProtein: Chicken
 productImageStyle: Caracas
+glutenFree: true
+vegan: false

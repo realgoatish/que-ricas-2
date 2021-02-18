@@ -6,5 +6,7 @@ description: shredded beef or chicken, beans, cheese, pico, sabroso sauce, house
   jalapeño
 productImage: ./images/menu/loaded-yuca-fries.jpg
 altText: "Loaded Yuca Fries"
+glutenFree: true
+vegan: false
 
 ---

@@ -7,5 +7,7 @@ description: sweet corn pancake stuffed with fresh white cheese and topped with 
 addOn: Add Beef - $2
 productImage: ./images/menu/cachapa.jpg
 altText: "Cachapa"
+glutenFree: true
+vegan: false
 
 ---

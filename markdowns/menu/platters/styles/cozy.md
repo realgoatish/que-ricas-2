@@ -6,5 +6,7 @@ productImage: ./images/menu/cozy.jpg
 altText: "Black Bean Burger Cozy Platter"
 productImageProtein: Black Bean Burger
 productImageStyle: Cozy
+glutenFree: false
+vegan: false
 
 ---

@@ -1,3 +1,5 @@
 ---
 number: 5
-itemName: Glaze (vegan)
+itemName: Vegan Maple Glaze
+glutenFree: false
+vegan: true

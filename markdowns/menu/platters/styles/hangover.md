@@ -6,3 +6,5 @@ productImage: ./images/menu/hangover.jpg
 altText: "Beef Hangover Platter"
 productImageProtein: Beef
 productImageStyle: Hangover
+glutenFree: true
+vegan: false
