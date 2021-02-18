@@ -5,6 +5,7 @@
 
   export let thumbnail;
   export let imageSlug;
+  export let imageExtension;
   export let allImages;
   export let processedImageSizes;
   export let sizes;
@@ -44,7 +45,7 @@
           media={`
             (min-width: ${size === "400" ? "10" : size}px)`}
           srcset={src.replace(
-            `${imageSlug}.jpg`,
+            `${imageSlug}.${imageExtension}`,
             `${imageSlug}-${size}.webp ${size}w`
           )}
           {sizes}
@@ -52,12 +53,12 @@
       {/each}
       {#each processedImageSizes as size}
         <source
-          type="image/jpeg"
+          type={`image/${imageExtension === 'jpg' ? 'jpeg' : imageExtension}`}
           media={`
             (min-width: ${size === "400" ? "10" : size}px)`}
           srcset={src.replace(
-            `${imageSlug}.jpg`,
-            `${imageSlug}-${size}.jpg ${size}w`
+            `${imageSlug}.${imageExtension}`,
+            `${imageSlug}-${size}.${imageExtension} ${size}w`
           )}
           {sizes}
         />

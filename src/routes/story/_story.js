@@ -9,6 +9,8 @@ export const aboutPage = story
       let splitPath = metadata.image.split('/')
       metadata.imageSlug = splitPath[splitPath.length - 1]
         .split('.')[0]
+      metadata.imageExtension = splitPath[splitPath.length - 1]
+        .split('.')[1]
       
       metadata.allImages = []
       

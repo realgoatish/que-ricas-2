@@ -4,6 +4,7 @@
 
   export let thumbnail;
   export let imageSlug;
+  export let imageExtension;
   export let allImages;
   export let sizes;
   export let processedImageSizes;
@@ -21,6 +22,7 @@
     <Image
       {thumbnail}
       {imageSlug}
+      {imageExtension}
       {allImages}
       {processedImageSizes}
       {src}

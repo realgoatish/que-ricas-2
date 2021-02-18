@@ -5,3 +5,5 @@ price: $5
 description: raw sugar, fruity cereal
 productImage: ./images/menu/birds-of-paradise.jpg
 altText: "Birds of Paradise Churros"
+glutenFree: false
+vegan: true

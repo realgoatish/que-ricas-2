@@ -5,5 +5,6 @@ price: "$10"
 description: shredded beef, sweet plantain, black beans and cotija cheese
 productImage: ./images/menu/rica.jpg
 altText: "The Rica Arepa"
-
+glutenFree: true
+vegan: false
 ---

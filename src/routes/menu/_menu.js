@@ -17,6 +17,8 @@ function transform(menuSection) {
         let splitPath = metadata.productImage.split('/')
         metadata.productImageSlug = splitPath[splitPath.length - 1]
           .split('.')[0]
+        metadata.productImageExtension = splitPath[splitPath.length - 1]
+          .split('.')[1]
         
         metadata.allProductImages = []
         

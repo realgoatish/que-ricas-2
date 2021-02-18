@@ -35,6 +35,7 @@
       <figure class="image__article sahar">
         <ImageLoader
           imageSlug={saharStory.imageSlug}
+          imageExtension={saharStory.imageExtension}
           allImages={saharStory.allImages}
           processedImageSizes={saharStory.imageSizes}
           src={saharStory.image}
@@ -54,6 +55,7 @@
       <figure class="image__article dar">
         <ImageLoader
           imageSlug={darStory.imageSlug}
+          imageExtension={darStory.imageExtension}
           allImages={darStory.allImages}
           processedImageSizes={darStory.imageSizes}
           src={darStory.image}

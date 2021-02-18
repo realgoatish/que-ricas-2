@@ -5,3 +5,5 @@ price: $8.50
 description: home-made black bean burger with sweet plantains, guasacaca, vegan
 productImage: ./images/menu/black-betty.jpg
 altText: "The Black Betty Arepa"
+glutenFree: true
+vegan: true
