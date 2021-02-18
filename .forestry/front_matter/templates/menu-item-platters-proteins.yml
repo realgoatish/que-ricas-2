@@ -11,3 +11,13 @@ fields:
 - type: text
   name: price
   label: Price
+- type: boolean
+  name: glutenFree
+  label: Gluten Free?
+  description: Toggle this to show the GF icon for this item
+  default: false
+- type: boolean
+  name: vegan
+  label: Vegan?
+  description: Toggle this to show the Vegan icon for this item
+  default: false
