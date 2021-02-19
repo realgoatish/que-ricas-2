@@ -29,7 +29,6 @@ fields:
   label: Add-On (optional)
 pages:
 - markdowns/menu/specials/Chicha.md
-- markdowns/menu/specials/Freecard.md
 - markdowns/menu/specials/Hot chocolate.md
 - markdowns/menu/specials/Quesillo.md
 - markdowns/menu/specials/omg.md
