@@ -1,7 +1,7 @@
 ---
 title: Honestly Delicious
 excerpt: content for homepage
-foodImage: "./images/home/cartel-arepa.jpg"
+foodImage: "./images/home/cartel.jpg"
 foodImageAltText: "The Cartel Arepa"
 hdImage: "./images/home/honestly-delicious.jpg"
 hdImageAltText: Honestly Delicious. Local. Better Ingredients. Authentic.

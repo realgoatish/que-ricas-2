@@ -1,11 +1,12 @@
 <script>
-  export let item
+  export let item = {}
+  export let legend
 </script>
 
-{#if item}
-  <div class="diet-icons">
-    {#if item.glutenFree}
-      <figure class="diet-icon">
+{#if item || legend}
+  <div class="div__diet-icons" class:legend>
+    {#if item.glutenFree || legend === "glutenFree"}
+      <figure class:legend>
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1125.628 1125.628" style="enable-background:new 0 0 1125.628 1125.628;" xml:space="preserve">
           <g>
             <path d="M562.812,0.002C252.476,0.002,0,252.478,0,562.814s252.476,562.812,562.812,562.812
@@ -21,8 +22,11 @@
           </svg>
       </figure>
     {/if}
-    {#if item.vegan}
-      <figure>
+    {#if legend && legend === "glutenFree"}
+      <p>= Gluten Free</p>
+    {/if}
+    {#if item.vegan || legend === "vegan"}
+      <figure class:legend>
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         viewBox="0 0 463 463" style="enable-background:new 0 0 463 463;" xml:space="preserve">
         <g>
@@ -48,14 +52,23 @@
         </svg>
       </figure>
     {/if}
+    {#if legend && legend === "vegan"}
+      <p>= Vegan</p>
+    {/if}
   </div>
 {/if}
 
 <style>
-  .diet-icons {
+  .div__diet-icons {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+  }
+
+  .div__diet-icons.legend {
+    justify-content: flex-start;
+    width: fit-content;
+    margin: 0 auto;
   }
 
   svg {
@@ -65,4 +78,11 @@
   figure {
     width: 43%;
   }
+
+  figure.legend {
+    width: 1.29rem;
+    margin: auto 0.4rem;
+  }
+
+
 </style>

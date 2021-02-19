@@ -37,6 +37,12 @@
     <br />
     <p class="bold">{headers.menuSectionSecondarySubtext}</p>
   {/if}
+  {#if headers.menuSectionTitle !== "Drinks"}
+    <div class="div__diet-icons--legend">
+      <DietIcons legend={"glutenFree"} />
+      <DietIcons legend={"vegan"} />
+    </div>
+  {/if}
 
   <!-- Platters & Churros Sections -->
   {#if headers.menuStepOneTitle}
@@ -47,7 +53,7 @@
           <div class:div__menu-item-text={item.productImage}>
             <h3>{item.itemName}</h3>
             {#if item.glutenFree || item.vegan}
-              <div class="div__diet-icons-wrapper">
+              <div class="div__diet-icons--wrapper">
                 <DietIcons {item} />
               </div>
             {/if}
@@ -83,7 +89,7 @@
           <div class:div__menu-item-text={item.productImage}>
             <h3>{item.itemName}</h3>
             {#if item.glutenFree || item.vegan}
-              <div class="div__diet-icons-wrapper">
+              <div class="div__diet-icons--wrapper">
                 <DietIcons {item} />
               </div>
             {/if}
@@ -118,7 +124,7 @@
             <div class:div__menu-item-text={item.productImage}>
               <h2 class="h2__menu--downsize">{item.itemName}</h2>
               {#if item.glutenFree || item.vegan}
-                <div class="div__diet-icons-wrapper">
+                <div class="div__diet-icons--wrapper">
                   <DietIcons {item} />
                 </div>
               {/if}
@@ -156,6 +162,11 @@
     text-align: center;
   }
 
+  section > p {
+    max-width: 60ch;
+    margin: 0 auto;
+  }
+
   .visible-block {
     display: block;
   }
@@ -180,7 +191,11 @@
     font-weight: 500;
   }
 
-  .div__diet-icons-wrapper {
+  .div__diet-icons--legend {
+    padding: 1rem 0;
+  }
+
+  .div__diet-icons--wrapper {
     width: 3rem;
   }
 
@@ -198,9 +213,9 @@
     border-color: #eae7db;
   }
 
-  .div__menu-item p {
+  /* .div__menu-item p {
     max-width: 60ch;
-  }
+  } */
 
   .figure__menu-item-image {
     width: 40%;
