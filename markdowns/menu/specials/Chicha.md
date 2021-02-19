@@ -6,6 +6,8 @@ description: 'Creamy, sweet rice milk drink garnished with condensed milk and gr
   cinnamon '
 productImage: ./images/menu/chicha.png
 altText: "Chicha"
+glutenFree: true
+vegan: false
 addOn: ''
 
 ---
