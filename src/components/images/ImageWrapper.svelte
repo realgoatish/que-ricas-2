@@ -1,12 +1,14 @@
 <script>
 
+
   export let currentSrc
   export let thumbnail
+
 
 </script>
 
 {#if thumbnail}
-  <a href={currentSrc}>
+  <a sapper:noscroll href={currentSrc}>
     <slot></slot>
   </a>
 {:else}
