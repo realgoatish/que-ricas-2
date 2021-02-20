@@ -29,7 +29,7 @@
     </li>
     {#each navPages as { linkText, route }}
       <li>
-        <a class:selected={$page.path === route} sapper:prefetch href={route}
+        <a class:selected={$page.path === route} sapper:prefetch sapper:noscroll href={route}
           >{linkText}</a
         >
       </li>
@@ -74,7 +74,7 @@
         </li>
         {#each navPages as { linkText, route }}
           <li>
-            <a sapper:prefetch href={route}>{linkText}</a>
+            <a sapper:prefetch sapper:noscroll href={route}>{linkText}</a>
           </li>
         {/each}
       </ul>
