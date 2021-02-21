@@ -21,8 +21,18 @@
 
   const { page } = stores();
 
+  function scrollToSection() {
+    let test = setInterval(function() {
+      if (document.querySelector('div.visible-block')) {
+        document.querySelector('div.visible-block').scrollIntoView()
+        clearInterval(test);
+      }
+    }, 100);
+  }
+
   function showMenuSection() {
     currentSection.update((section) => this.value);
+    scrollToSection()
   }
 </script>
 
