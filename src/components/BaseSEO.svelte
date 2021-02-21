@@ -196,10 +196,11 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content={siteName} />
   <meta property="og:title" content={title} />
-  <meta property="og:image" content={`${image.replace(`.${imageExtension}`, `-800.${imageExtension}`)}`} />
+  <!-- <meta property="og:image" content={`${image.replace(`.${imageExtension}`, `-800.${imageExtension}`)}`} /> -->
+  <meta property="og:image" content={image} />
   <meta property="og:image:alt" content={altText} />
-  <meta property="og:image:width" content="800" />
-  <meta property="og:image:height" content="800" />
+  <meta property="og:image:width" content="400" />
+  <meta property="og:image:height" content="400" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonical} />
   {@html jsonldScript}
