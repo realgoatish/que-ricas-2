@@ -18,7 +18,7 @@
 
   export let image = "test";
   export let altText = "test";
-  const siteUrl = `https://${$page.host}/`;
+  const siteUrl = `https://www.que-ricas.com/`;
   export let canonical;
   // $page.path === "/" ? siteUrl : `https://${$page.host}${$page.path}/`;
   const siteName = "Que Ricas";
