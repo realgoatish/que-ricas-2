@@ -1,5 +1,6 @@
 <script>
 
+  import { goto } from '@sapper/app'
 
   export let currentSrc
   export let thumbnail
