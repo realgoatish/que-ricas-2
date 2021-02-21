@@ -197,7 +197,7 @@
   <meta property="og:site_name" content={siteName} />
   <meta property="og:title" content={title} />
   <!-- <meta property="og:image" content={`${image.replace(`.${imageExtension}`, `-800.${imageExtension}`)}`} /> -->
-  <meta property="og:image" content={`${image}?v=${Math.floor((new Date().getTime()) / 1000)}`} />
+  <meta property="og:image" content={`${image.replace(`.${imageExtension}`, `-400.${imageExtension}`)}?v=${Math.floor((new Date().getTime()) / 1000)}`} />
   <meta property="og:image:alt" content={altText} />
   <meta property="og:image:width" content="399" />
   <meta property="og:image:height" content="399" />
