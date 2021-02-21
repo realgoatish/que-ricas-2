@@ -26,7 +26,7 @@
 <BaseSEO
   title="Home"
   description="Authentic South American fare with a funky vibe. Que Ricas has the best empanadas in South Jersey"
-  canonical={`https://${$page.host}/`}
+  canonical={`https://www.que-ricas.com${$page.path}`}
   image={homepageContent.foodImage}
   altText={homepageContent.foodImageAltText}
 />
