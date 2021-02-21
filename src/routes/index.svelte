@@ -28,6 +28,7 @@
   description="Authentic South American fare with a funky vibe. Que Ricas has the best empanadas in South Jersey"
   canonical={`https://www.que-ricas.com${$page.path}`}
   image={homepageContent.foodImage}
+  imageExtension={homepageContent.foodImageExtension}
   altText={homepageContent.foodImageAltText}
 />
 

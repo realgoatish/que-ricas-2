@@ -26,6 +26,7 @@
   description="Sahar loves bringing you the best South American food in Haddon Township at Que Ricas"
   canonical={`https://www.que-ricas.com${$page.path}`}
   image={saharStory.image}
+  imageExtension={saharStory.imageExtension}
   altText={saharStory.altText}
 />
 
