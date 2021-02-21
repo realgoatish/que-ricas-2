@@ -24,7 +24,7 @@
 <BaseSEO
   title="Our Story"
   description="Sahar loves bringing you the best South American food in Haddon Township at Que Ricas"
-  canonical={`https://${$page.host}${$page.path}`}
+  canonical={`https://www.que-ricas.com${$page.path}`}
   image={saharStory.image}
   altText={saharStory.altText}
 />
