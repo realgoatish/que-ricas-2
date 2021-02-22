@@ -14,11 +14,14 @@
   import Card from "../../components/Card.svelte";
   import MenuSection from "../../components/MenuSection.svelte";
   import { currentSection } from "../../_helpers/stores";
-  import { elementScrollIntoView } from 'seamless-scroll-polyfill' 
+  import { elementScrollIntoViewPolyfill } from 'seamless-scroll-polyfill' 
+  import { onMount } from 'svelte'
 
   export let menu;
 
-
+  onMount(() => {
+    elementScrollIntoViewPolyfill()
+  })
 
   $: console.log(menu)
 
@@ -27,7 +30,7 @@
   function scrollToSection() {
     let test = setInterval(function() {
       if (document.querySelector('div.visible-block')) {
-        elementScrollIntoView(document.querySelector('div.visible-block'), { behavior: 'smooth' })
+        document.querySelector('div.visible-block').scrollIntoView({ behavior: 'smooth' })
         clearInterval(test);
       }
     }, 100);
