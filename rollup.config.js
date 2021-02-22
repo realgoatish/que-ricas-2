@@ -33,19 +33,6 @@ export default {
 				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
       svelte({
-        // preprocess: {
-        //   ...image({
-        //     quality: 75,
-        //     webp: true,
-        //     webpOptions: {
-        //       quality: 75,
-        //       lossless: false,
-        //       force: true
-        //     },
-        //     processFolders: ['images/story', 'images/menu', 'images/home'],
-        //     processFoldersSizes: [480, 800, 1200]
-        //   })
-        // },
 				compilerOptions: {
 					dev,
 					hydratable: true
