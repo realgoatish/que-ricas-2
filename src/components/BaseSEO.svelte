@@ -202,10 +202,11 @@
   <meta property="og:image:alt" content={altText} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonical} />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:card" content="summary" />
   <meta name="twitter:creater" content="@letslamb" />
   <meta name="twitter:title" content={siteName} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={`${image.replace(`.${imageExtension}`, `-400.${imageExtension}`)}`} />
+  <meta name="twitter:image:alt" content={altText} />
   {@html jsonldScript}
 </svelte:head>
