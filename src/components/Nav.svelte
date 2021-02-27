@@ -2,8 +2,6 @@
   import ImageLoader from "./images/ImageLoader.svelte";
   import { clickOutside } from "./../_helpers/clickOutside";
   import { slide } from "svelte/transition";
-  import { draw } from "svelte/transition";
-  import { linear } from "svelte/easing";
   import { stores } from "@sapper/app";
   const { page } = stores();
 
@@ -17,8 +15,15 @@
 
   let showMobileMenu = false;
 
+  let hamburgerMenu
+
   function handleMenuClicks(event) {
     showMobileMenu = !showMobileMenu;
+    if (-1 !== hamburgerMenu.className.indexOf('opened')) {
+      hamburgerMenu.className = hamburgerMenu.className.replace(' opened', '')
+    } else {
+      hamburgerMenu.className += ' opened'
+    }
   }
 </script>
 
@@ -46,25 +51,16 @@
       aria-haspopup="true"
       aria-expanded={showMobileMenu}
       aria-label="hamburger menu"
+      class="menu-toggle"
+      id="menu-toggle"
+      bind:this={hamburgerMenu}
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        aria-hidden="true"
-      >
-        {#if !showMobileMenu}
-          <path
-            d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
-            in:draw={{ delay: 250, duration: 1000, easing: linear }}
-          />
-        {:else}
-          <path
-            d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414
-            1.414L10 11.414l7.071 7.071 1.414-1.414L11.414
-            10l7.071-7.071-1.414-1.414L10 8.586z"
-            in:draw={{ delay: 250, duration: 1000, easing: linear }}
-          />
-        {/if}
+      <svg class="icon icon-menu-toggle" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100">
+        <g class="svg-menu-toggle">
+          <path class="line line-1" d="M5 13h90v14H5z"/>
+          <path class="line line-2" d="M5 43h90v14H5z"/>
+          <path class="line line-3" d="M5 73h90v14H5z"/>
+        </g>
       </svg>
     </button>
     {#if showMobileMenu}
@@ -83,6 +79,7 @@
 </nav>
 
 <style>
+
   a {
     text-decoration: none;
     text-transform: uppercase;
@@ -97,8 +94,69 @@
     align-self: flex-end;
     border: none;
     cursor: pointer;
-    width: 2rem;
+    max-width: 3rem;
   }
+
+  button {
+	border: none;
+	border-radius: 0;
+	color: #fff;
+  cursor: pointer;
+	display: inline-block; 
+	text-transform: uppercase;
+	transition: all 0.25s ease-in-out;
+}
+
+.menu-toggle {
+  font-size: 15.1627px;
+}
+.menu-toggle:focus {
+	outline: thin dotted;
+  outline-offset: -2px;
+}
+
+.icon {
+	display: inline-block;
+	fill: #000;
+	height: 1em;
+	width: 1em;
+	vertical-align: middle;
+	position: relative;
+	top: -0.0625em;
+}
+
+/* Menu toggle styles. */
+
+.icon-menu-toggle {
+	width: 3em;
+	height: 3em;
+  top: 0;
+}
+
+/* Animate menu icon (lines). */
+.svg-menu-toggle .line {
+  opacity: 1;
+  transform: rotate(0) translateY(0) translateX(0);
+  transform-origin: 1em 1em;
+  transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
+.svg-menu-toggle .line-1 {
+  transform-origin: 1em 2.5em;
+
+}
+.svg-menu-toggle .line-3 {
+  transform-origin: 1em 4.5em;
+}
+
+.menu-toggle.opened .svg-menu-toggle .line-1 {
+  transform: rotate(45deg) translateY(0) translateX(0);
+}
+.menu-toggle.opened .svg-menu-toggle .line-2 {
+  opacity: 0;
+}
+.menu-toggle.opened .svg-menu-toggle .line-3 {
+  transform: rotate(-45deg) translateY(0em) translateX(0em);
+}
 
   .nav__ul--desktop {
     display: none;
@@ -108,10 +166,6 @@
     display: flex;
     flex-flow: column nowrap;
     padding-top: 1rem;
-  }
-  .nav__section--mobile > * + * {
-    /* this is meant to create visual symmetry between the hamburger menu icon, the mobile nav menu, and the header's bottom border.  Note that this number is different from the overall header's padding to account for some natural whitespace at the bottom of the hamburger menu icon */
-    /* padding-top: 3rem; */
   }
 
   .nav__ul--mobile {
