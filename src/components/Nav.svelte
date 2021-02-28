@@ -108,7 +108,7 @@
 }
 
 .menu-toggle {
-  font-size: 15.1627px;
+  font-size: 14.5px;
 }
 .menu-toggle:focus {
 	outline: thin dotted;
