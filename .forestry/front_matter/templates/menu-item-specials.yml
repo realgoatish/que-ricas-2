@@ -29,7 +29,6 @@ fields:
   label: Add-On (optional)
 pages:
 - markdowns/menu/specials/Chicha.md
-- markdowns/menu/specials/Hot chocolate.md
 - markdowns/menu/specials/Miniarepas.md
 - markdowns/menu/specials/Patacón.md
 - markdowns/menu/specials/Quesillo.md
