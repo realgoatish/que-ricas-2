@@ -29,6 +29,7 @@ fields:
   label: Add-On (optional)
 pages:
 - markdowns/menu/specials/Chicha.md
+- markdowns/menu/specials/Crabcake.md
 - markdowns/menu/specials/Miniarepas.md
 - markdowns/menu/specials/Patacón.md
 - markdowns/menu/specials/Shepardpie.md
