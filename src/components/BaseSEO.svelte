@@ -129,9 +129,6 @@
           "@id": `${canonical}#primaryimage`,
         },
         description: description,
-        // breadcrumb: {
-        //   "@id": `${canonical}/#breadcrumb`,
-        // },
       },
     ],
   };
