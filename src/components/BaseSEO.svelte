@@ -133,7 +133,7 @@
     ],
   };
 
-  let breadCrumbs = {};  
+  let breadCrumbs = {};
 
   let breadCrumbId = {};
 
