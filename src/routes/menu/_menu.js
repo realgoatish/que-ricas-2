@@ -97,7 +97,6 @@ export const menu = {
     churros: churros,
     sidesAndExtras: sidesAndExtras,
     drinks: drinks,
-    specials: specials
   },
   seo: {
     title: "Que Ricas Authentic Venezuelan Menu",

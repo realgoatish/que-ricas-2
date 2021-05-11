@@ -75,7 +75,6 @@
       <MenuSection info={menu.sections.churros} />
       <MenuSection info={menu.sections.sidesAndExtras} />
       <MenuSection info={menu.sections.drinks} />
-      <MenuSection info={menu.sections.specials} />
     </Card>
   </div>
 </article>
