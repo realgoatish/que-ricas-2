@@ -55,11 +55,6 @@ sections:
     label: Drinks
     create: documents
     match: "*.md"
-  - type: directory
-    path: markdowns/menu/specials
-    label: Specials
-    create: documents
-    match: "*.md"
   - type: heading
     label: Global Layout
   - type: directory
