@@ -1,7 +1,7 @@
 ---
 number: "1"
 itemName: Shredded Beef
-price: "$14.50"
+price: "$15.50"
 glutenFree: true
 vegan: false
 
