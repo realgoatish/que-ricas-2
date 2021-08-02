@@ -1,4 +1,6 @@
 ---
-number: 10
+number: "10"
 itemName: Fresh Fruit Juices
-price: $3.75
+price: "$4"
+
+---
