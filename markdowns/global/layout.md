@@ -38,11 +38,11 @@ contactInfo:
   state: NJ
   zip: 08108
 businessHours:
-  - "Wed - Sat:"
+  - "Tues - Sat:"
   - "11 AM - 8 PM"
   - "Sun:"
   - "11 AM - 6 PM"
-  - "Closed Mon & Tue"
+  - "Closed Mon"
 # Don't do hamburger menus this way anymore, see Inclusive Components by Heydon Pickering
 # nav:
 #   hamburgerMenu:
