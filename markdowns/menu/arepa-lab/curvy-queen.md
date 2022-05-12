@@ -1,7 +1,7 @@
 ---
 number: "4"
 itemName: Curvy Queen
-price: "$10"
+price: "$10.50"
 description: Venezuela's favorite - shredded chicken & avocado salad, sweet plantains,
   smoked gouda
 productImage: "./images/menu/curvy-queen.jpg"
