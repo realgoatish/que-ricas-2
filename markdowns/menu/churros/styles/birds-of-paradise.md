@@ -1,9 +1,11 @@
 ---
-number: 2
+number: "2"
 itemName: Birds of Paradise
-price: $5
+price: "$5"
 description: raw sugar, fruity cereal
-productImage: ./images/menu/birds-of-paradise.jpg
-altText: "Birds of Paradise Churros"
+productImage: "./images/menu/birds-of-paradise.jpg"
+altText: Birds of Paradise Churros
 glutenFree: false
-vegan: true
+vegan: false
+
+---
