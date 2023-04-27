@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "tinacms dev -c \"sapper dev\"",
     "build": "tinacms build && sapper build --legacy",
-    "export": "tinacms build && sapper export --legacy --entry './ ./404' && mv __sapper__/export/404/index.html __sapper__/export/404.html && rm -rf __sapper__/export/404 && rm __sapper__/export/admin/.gitignore",
+    "export": "tinacms build && sapper export --legacy --entry './ ./404' && mv __sapper__/export/404/index.html __sapper__/export/404.html && rm -rf __sapper__/export/404 && rm -rf __sapper__/export/admin/.gitignore",
     "start": "node __sapper__/build"
   },
   "dependencies": {
