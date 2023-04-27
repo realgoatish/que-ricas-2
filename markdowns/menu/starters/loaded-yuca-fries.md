@@ -1,5 +1,5 @@
 ---
-number: "3"
+number: 3
 itemName: 'Loaded Tostones or Loaded Yucca '
 price: "$12"
 description: shredded beef or chicken, beans, cheese, pico, sabroso sauce, house-pickled

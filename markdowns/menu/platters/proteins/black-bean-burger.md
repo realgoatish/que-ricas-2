@@ -1,8 +1,8 @@
 ---
-number: "5"
+number: 5
 itemName: Black Bean Burger
-price: "$13.50"
+price: $15.50
 glutenFree: true
 vegan: true
-
 ---
+

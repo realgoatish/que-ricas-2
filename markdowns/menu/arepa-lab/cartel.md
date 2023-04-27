@@ -1,5 +1,5 @@
 ---
-number: "5"
+number: 5
 itemName: Cartel
 price: "$10"
 description: chorizo, carmelized peppers, onions, smoked gouda

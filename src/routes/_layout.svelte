@@ -18,6 +18,10 @@
 
   export let layout;
 
+  // $: console.log(
+  //   `layout data on arrival in front end: ${JSON.stringify(layout, null, 2)}`
+  // );
+
   const [layoutContent] = layout;
 
   const socialIcons = layoutContent.socialIcons;

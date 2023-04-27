@@ -1,6 +1,8 @@
 ---
 number: 4
 itemName: Add Guasacaca
-price: $2
+price: $3
 glutenFree: true
 vegan: true
+---
+

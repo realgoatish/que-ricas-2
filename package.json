@@ -3,15 +3,18 @@
   "description": "TODO",
   "version": "0.0.1",
   "scripts": {
-    "dev": "sapper dev",
-    "build": "sapper build --legacy",
-    "export": "sapper export --legacy --entry './ ./404' && mv __sapper__/export/404/index.html __sapper__/export/404.html && rm -rf __sapper__/export/404",
+    "dev": "tinacms dev -c \"sapper dev\"",
+    "build": "tinacms build && sapper build --legacy",
+    "export": "tinacms build && sapper export --legacy --entry './ ./404' && mv __sapper__/export/404/index.html __sapper__/export/404.html && rm -rf __sapper__/export/404",
     "start": "node __sapper__/build"
   },
   "dependencies": {
+    "@tinacms/cli": "^1.5.6",
     "compression": "^1.7.1",
+    "dotenv": "^16.0.3",
     "polka": "next",
-    "sirv": "^1.0.0"
+    "sirv": "^1.0.0",
+    "tinacms": "^1.4.6"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

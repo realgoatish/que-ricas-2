@@ -1,5 +1,5 @@
 ---
-number: "3"
+number: 3
 itemName: Shaggy
 price: "$10.50"
 description: shredded chicken, sweet plantain, fried queso blanco, pico de gallo,

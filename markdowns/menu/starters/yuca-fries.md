@@ -1,8 +1,8 @@
 ---
-number: "2"
-itemName: Tostones
-price: "$5"
-description: tender, cripsy, fried green plantains served with sabroso sauce
+number: 5
+itemName: 'Yuca Fries'
+price: "$6"
+description: 'tender and crispy fried cassava served with sabroso sauce '
 glutenFree: true
 vegan: false
 

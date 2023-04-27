@@ -1,5 +1,5 @@
 ---
-number: "1"
+number: 1
 itemName: Rica
 price: "$10.50"
 description: shredded beef, sweet plantain, black beans and cotija cheese
