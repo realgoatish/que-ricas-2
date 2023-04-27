@@ -1,9 +1,9 @@
 ---
-number: "3"
+number: 3
 itemName: Chupacabra
-price: "$5"
-description: raw sugar, cayenne, cinnamon
+price: $6
+description: 'raw sugar, cayenne, cinnamon'
 glutenFree: false
 vegan: false
-
 ---
+

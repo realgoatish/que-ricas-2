@@ -1,5 +1,5 @@
 ---
-number: "2"
+number: 2
 itemName: Sombrero
 price: "$10.50"
 description: milanesa (fried steak), fried queso blanco, sweet pepper cabbage slaw,

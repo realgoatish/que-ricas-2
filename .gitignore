@@ -6,4 +6,6 @@ yarn-error.log
 /static/g/images/home/
 /static/g/images/menu/
 /static/g/images/story/
+.env
 
+node_modules

@@ -1,6 +1,6 @@
 ---
-number: "5"
+number: 5
 itemName: Coke or Diet Coke - Can
-price: "$1.49"
-
+price: $1.69
 ---
+

@@ -1,5 +1,5 @@
 ---
-number: "8"
+number: 8
 itemName: Black Betty
 price: "$9"
 description: home-made black bean burger with sweet plantains, guasacaca, vegan

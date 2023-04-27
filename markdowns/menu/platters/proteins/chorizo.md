@@ -1,8 +1,8 @@
 ---
-number: "4"
+number: 4
 itemName: Chorizo
-price: "$14.50"
+price: $15.50
 glutenFree: true
 vegan: false
-
 ---
+

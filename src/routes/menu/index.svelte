@@ -14,23 +14,27 @@
   import Card from "../../components/Card.svelte";
   import MenuSection from "../../components/MenuSection.svelte";
   import { currentSection } from "../../_helpers/stores";
-  import { elementScrollIntoViewPolyfill } from 'seamless-scroll-polyfill' 
-  import { onMount } from 'svelte'
+  import { elementScrollIntoViewPolyfill } from "seamless-scroll-polyfill";
+  import { onMount } from "svelte";
 
   export let menu;
 
   onMount(() => {
-    elementScrollIntoViewPolyfill()
-  })
+    elementScrollIntoViewPolyfill();
+  });
 
-  $: console.log(menu)
+  $: console.log(
+    `menu data on arrival in front end: ${JSON.stringify(menu, null, 2)}`
+  );
 
   const { page } = stores();
 
   function scrollToSection() {
-    let test = setInterval(function() {
-      if (document.querySelector('div.visible-block')) {
-        document.querySelector('div.visible-block').scrollIntoView({ behavior: 'smooth' })
+    let test = setInterval(function () {
+      if (document.querySelector("div.visible-block")) {
+        document
+          .querySelector("div.visible-block")
+          .scrollIntoView({ behavior: "smooth" });
         clearInterval(test);
       }
     }, 100);
@@ -38,7 +42,7 @@
 
   function showMenuSection() {
     currentSection.update((section) => this.value);
-    scrollToSection()
+    scrollToSection();
   }
 </script>
 
@@ -47,7 +51,7 @@
   description="Our menu features empanadas, arepas, pabellon bowls, churros, local specialties, lunch specials, gluten free and vegan options"
   canonical={`https://www.que-ricas.com${$page.path}`}
   image={menu.seo.image}
-  imageExtension={'jpg'}
+  imageExtension={"jpg"}
   altText={menu.seo.altText}
 />
 

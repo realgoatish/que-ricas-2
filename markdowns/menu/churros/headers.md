@@ -1,7 +1,7 @@
 ---
 number: 0
 menuSectionTitle: Churros
-menuStepOneTitle: 'Step One: Choose Homemade Churro (vegan)'
+menuStepOneTitle: 'Step One: Choose Style'
 menuStepTwoTitle: 'Step Two: Choose Dipping Sauce (included)'
-
 ---
+
