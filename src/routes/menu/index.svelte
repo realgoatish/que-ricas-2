@@ -23,9 +23,9 @@
     elementScrollIntoViewPolyfill();
   });
 
-  $: console.log(
-    `menu data on arrival in front end: ${JSON.stringify(menu, null, 2)}`
-  );
+  // $: console.log(
+  //   `menu data on arrival in front end: ${JSON.stringify(menu, null, 2)}`
+  // );
 
   const { page } = stores();
 
