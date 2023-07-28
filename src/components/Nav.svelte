@@ -15,27 +15,30 @@
 
   let showMobileMenu = false;
 
-  let hamburgerMenu
+  let hamburgerMenu;
 
   function handleMenuClicks(event) {
     showMobileMenu = !showMobileMenu;
-    if (-1 !== hamburgerMenu.className.indexOf('opened')) {
-      hamburgerMenu.className = hamburgerMenu.className.replace(' opened', '')
+    if (-1 !== hamburgerMenu.className.indexOf("opened")) {
+      hamburgerMenu.className = hamburgerMenu.className.replace(" opened", "");
     } else {
-      hamburgerMenu.className += ' opened'
+      hamburgerMenu.className += " opened";
     }
   }
 </script>
 
 <nav>
   <ul class="nav__ul--desktop">
-    <li>
+    <!-- <li>
       <a href={orderOnline.link}>{orderOnline.text}</a>
-    </li>
+    </li> -->
     {#each navPages as { linkText, route }}
       <li>
-        <a class:selected={$page.path === route} sapper:prefetch sapper:noscroll href={route}
-          >{linkText}</a
+        <a
+          class:selected={$page.path === route}
+          sapper:prefetch
+          sapper:noscroll
+          href={route}>{linkText}</a
         >
       </li>
     {/each}
@@ -55,19 +58,28 @@
       id="menu-toggle"
       bind:this={hamburgerMenu}
     >
-      <svg class="icon icon-menu-toggle" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100">
+      <svg
+        class="icon icon-menu-toggle"
+        aria-hidden="true"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 100 100"
+      >
         <g class="svg-menu-toggle">
-          <path class="line line-1" d="M5 13h90v14H5z"/>
-          <path class="line line-2" d="M5 43h90v14H5z"/>
-          <path class="line line-3" d="M5 73h90v14H5z"/>
+          <path class="line line-1" d="M5 13h90v14H5z" />
+          <path class="line line-2" d="M5 43h90v14H5z" />
+          <path class="line line-3" d="M5 73h90v14H5z" />
         </g>
       </svg>
     </button>
     {#if showMobileMenu}
       <ul class="nav__ul--mobile" in:slide>
-        <li>
+        <!-- <li>
           <a href={orderOnline.link}>{orderOnline.text}</a>
-        </li>
+        </li> -->
         {#each navPages as { linkText, route }}
           <li>
             <a sapper:prefetch sapper:noscroll href={route}>{linkText}</a>
@@ -79,7 +91,6 @@
 </nav>
 
 <style>
-
   a {
     text-decoration: none;
     text-transform: uppercase;
@@ -98,65 +109,64 @@
   }
 
   button {
-	border: none;
-	border-radius: 0;
-	color: #fff;
-  cursor: pointer;
-	display: inline-block; 
-	text-transform: uppercase;
-	transition: all 0.25s ease-in-out;
-}
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: all 0.25s ease-in-out;
+  }
 
-.menu-toggle {
-  font-size: 14.5px;
-}
-.menu-toggle:focus {
-	outline: thin dotted;
-  outline-offset: -2px;
-}
+  .menu-toggle {
+    font-size: 14.5px;
+  }
+  .menu-toggle:focus {
+    outline: thin dotted;
+    outline-offset: -2px;
+  }
 
-.icon {
-	display: inline-block;
-	fill: #000;
-	height: 1em;
-	width: 1em;
-	vertical-align: middle;
-	position: relative;
-	top: -0.0625em;
-}
+  .icon {
+    display: inline-block;
+    fill: #000;
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+    position: relative;
+    top: -0.0625em;
+  }
 
-/* Menu toggle styles. */
+  /* Menu toggle styles. */
 
-.icon-menu-toggle {
-	width: 3em;
-	height: 3em;
-  top: 0;
-}
+  .icon-menu-toggle {
+    width: 3em;
+    height: 3em;
+    top: 0;
+  }
 
-/* Animate menu icon (lines). */
-.svg-menu-toggle .line {
-  opacity: 1;
-  transform: rotate(0) translateY(0) translateX(0);
-  transform-origin: 1em 1em;
-  transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
-}
-.svg-menu-toggle .line-1 {
-  transform-origin: 1em 2.5em;
+  /* Animate menu icon (lines). */
+  .svg-menu-toggle .line {
+    opacity: 1;
+    transform: rotate(0) translateY(0) translateX(0);
+    transform-origin: 1em 1em;
+    transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+  }
+  .svg-menu-toggle .line-1 {
+    transform-origin: 1em 2.5em;
+  }
+  .svg-menu-toggle .line-3 {
+    transform-origin: 1em 4.5em;
+  }
 
-}
-.svg-menu-toggle .line-3 {
-  transform-origin: 1em 4.5em;
-}
-
-.menu-toggle.opened .svg-menu-toggle .line-1 {
-  transform: rotate(45deg) translateY(0) translateX(0);
-}
-.menu-toggle.opened .svg-menu-toggle .line-2 {
-  opacity: 0;
-}
-.menu-toggle.opened .svg-menu-toggle .line-3 {
-  transform: rotate(-45deg) translateY(0em) translateX(0em);
-}
+  .menu-toggle.opened .svg-menu-toggle .line-1 {
+    transform: rotate(45deg) translateY(0) translateX(0);
+  }
+  .menu-toggle.opened .svg-menu-toggle .line-2 {
+    opacity: 0;
+  }
+  .menu-toggle.opened .svg-menu-toggle .line-3 {
+    transform: rotate(-45deg) translateY(0em) translateX(0em);
+  }
 
   .nav__ul--desktop {
     display: none;

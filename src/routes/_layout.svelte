@@ -27,6 +27,10 @@
   const socialIcons = layoutContent.socialIcons;
 </script>
 
+<p>
+  Please call to order. Our online ordering service is experiencing technical
+  difficulties
+</p>
 <Header {...layoutContent} />
 <main>
   <slot />
@@ -34,6 +38,12 @@
 <Footer {socialIcons} />
 
 <style>
+  p {
+    background: orange;
+    color: black;
+    font-size: 1.25rem;
+    text-align: center;
+  }
   /* :global(body) {
     font-size: 85%;
   }
