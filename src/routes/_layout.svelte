@@ -27,10 +27,11 @@
   const socialIcons = layoutContent.socialIcons;
 </script>
 
-<p>
+<!-- URGENT code for emergency banner -->
+<!-- <p>
   Please call to order. Our online ordering service is experiencing technical
   difficulties
-</p>
+</p> -->
 <Header {...layoutContent} />
 <main>
   <slot />
@@ -38,19 +39,11 @@
 <Footer {socialIcons} />
 
 <style>
-  p {
+  /* URGENT code for emergency banner */
+  /* p {
     background: orange;
     color: black;
     font-size: 1.25rem;
     text-align: center;
-  }
-  /* :global(body) {
-    font-size: 85%;
-  }
-
-  @media (min-width: 400px) {
-    :global(body) {
-      font-size: 100%;
-    }
   } */
 </style>
