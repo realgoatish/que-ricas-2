@@ -30,9 +30,9 @@
 <nav>
   <ul class="nav__ul--desktop">
     <!-- comment out this <li> if URGENT -->
-    <li>
+    <!-- <li>
       <a href={orderOnline.link}>{orderOnline.text}</a>
-    </li>
+    </li> -->
     {#each navPages as { linkText, route }}
       <li>
         <a
@@ -79,9 +79,9 @@
     {#if showMobileMenu}
       <ul class="nav__ul--mobile" in:slide>
         <!-- comment out this <li> if URGENT -->
-        <li>
+        <!-- <li>
           <a href={orderOnline.link}>{orderOnline.text}</a>
-        </li>
+        </li> -->
         {#each navPages as { linkText, route }}
           <li>
             <a sapper:prefetch sapper:noscroll href={route}>{linkText}</a>
