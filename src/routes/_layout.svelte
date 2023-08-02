@@ -28,11 +28,11 @@
 </script>
 
 <!-- URGENT code for emergency banner -->
-<p>
+<!-- <p>
   Please call to order from <a href="/menu/">our menu</a>, or order via walk-in.
   Our online ordering service is temporarily down. We apologize for any
   inconvenience.
-</p>
+</p> -->
 <Header {...layoutContent} />
 <main>
   <slot />
@@ -41,7 +41,7 @@
 
 <style>
   /* URGENT code for emergency banner */
-  p {
+  /* p {
     background: orange;
     color: black;
     font-size: 1.25rem;
@@ -50,5 +50,5 @@
 
   p a {
     color: blue;
-  }
+  } */
 </style>
