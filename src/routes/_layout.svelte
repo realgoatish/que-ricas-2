@@ -28,10 +28,10 @@
 </script>
 
 <!-- URGENT code for emergency banner -->
-<p>
+<!-- <p>
   The restaurant is open today, but Haddon Ave. is closed for an event. Please
   call to order from <a href="/menu/">our menu</a>
-</p>
+</p> -->
 <Header {...layoutContent} />
 <main>
   <slot />
@@ -40,7 +40,7 @@
 
 <style>
   /* URGENT code for emergency banner */
-  p {
+  /* p {
     background: orange;
     color: black;
     font-size: 1.25rem;
@@ -49,5 +49,5 @@
 
   p a {
     color: blue;
-  }
+  } */
 </style>
