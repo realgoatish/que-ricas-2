@@ -1,11 +1,14 @@
 ---
 title: Order Online
 options:
-  pickup: 
-    text: "Order Pickup"
-    link: "https://www.clover.com/online-ordering/que-ricas"
-  delivery1: 
-    text: "Order GrubHub"
-    link: "https://www.grubhub.com/restaurant/que-ricas-46-haddon-ave-haddon-township/6837624"
+  - link: 
+      text: "In-Store Pickup"
+      href: "https://www.clover.com/online-ordering/que-ricas"
+  - link: 
+      text: "DoorDash"
+      href: "https://www.doordash.com/store/que-ricas-haddon-township-27547818/"
+  - link: 
+      text: "GrubHub"
+      href: "https://www.grubhub.com/restaurant/que-ricas-46-haddon-ave-haddon-township/6837624"
 
 ---
