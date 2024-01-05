@@ -24,14 +24,18 @@
         <div>
           <h1>{metadata.title}</h1>
         </div>
-        <div class="cluster">
-          <a href={metadata.options.pickup.link}
-            >{metadata.options.pickup.text}</a
-          >
-          <a href={metadata.options.delivery1.link}
+        <p>Order for pickup or delivery by clicking one of the options below</p>
+        <ul class="cluster">
+          {#each metadata.options as item}
+            <li>
+              <a href={item.link.href}>{item.link.text}</a>
+            </li>
+          {/each}
+
+          <!-- <a href={metadata.options.delivery1.link}
             >{metadata.options.delivery1.text}</a
-          >
-        </div>
+          > -->
+        </ul>
       </div>
     </div>
     <br />
@@ -47,6 +51,8 @@
 
 <style>
   a {
+    display: block;
+    /* min-height: 100%; */
     text-decoration: none;
     border: 1px solid rgb(245, 124, 0);
     /* width: 7rem; */
@@ -67,10 +73,18 @@
     text-align: center;
   }
 
-  /* .center {
+  ul {
+    margin: 0 auto;
+  }
+
+  li {
+    flex: 1 1 0;
+  }
+
+  .center {
     box-sizing: content-box;
     margin-inline: auto;
-  } */
+  }
 
   .stack {
     display: flex;
@@ -90,7 +104,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: var(--space, 1.5rem);
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
   }
 </style>
