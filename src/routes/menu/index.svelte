@@ -23,9 +23,9 @@
     elementScrollIntoViewPolyfill();
   });
 
-  // $: console.log(
-  //   `menu data on arrival in front end: ${JSON.stringify(menu, null, 2)}`
-  // );
+  $: console.log(
+    `menu data on arrival in front end: ${JSON.stringify(menu, null, 2)}`
+  );
 
   const { page } = stores();
 
@@ -75,6 +75,7 @@
       <MenuSection info={menu.sections.starters} />
       <MenuSection info={menu.sections.empanadas} />
       <MenuSection info={menu.sections.arepas} />
+      <MenuSection info={menu.sections.tacos} />
       <MenuSection info={menu.sections.platters} />
       <MenuSection info={menu.sections.churros} />
       <MenuSection info={menu.sections.sidesAndExtras} />

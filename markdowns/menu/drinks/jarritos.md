@@ -1,7 +1,7 @@
 ---
 number: 9
 itemName: Jarritos
-description: Lime, Pineapple, Grapefruit
+description: Pineapple
 price: "$2.99"
 
 ---
