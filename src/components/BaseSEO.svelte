@@ -55,7 +55,7 @@
           {
             "@type": "OpeningHoursSpecification",
             dayOfWeek: "Sunday",
-            opens: "11:00",
+            opens: "12:00",
             closes: "18:00",
           },
           {
@@ -193,7 +193,10 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content={siteName} />
   <meta property="og:title" content={title} />
-  <meta property="og:image" content={`${image.replace(`.${imageExtension}`, `-400.${imageExtension}`)}?v=${Math.floor((new Date().getTime()) / 1000)}`} />
+  <meta
+    property="og:image"
+    content={`${image.replace(`.${imageExtension}`, `-400.${imageExtension}`)}?v=${Math.floor(new Date().getTime() / 1000)}`}
+  />
   <meta property="og:image:width" content="399" />
   <meta property="og:image:height" content="399" />
   <meta property="og:image:alt" content={altText} />
@@ -203,7 +206,10 @@
   <meta name="twitter:creater" content="@letslamb" />
   <meta name="twitter:title" content={siteName} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={`${image.replace(`.${imageExtension}`, `-400.${imageExtension}`)}`} />
+  <meta
+    name="twitter:image"
+    content={`${image.replace(`.${imageExtension}`, `-400.${imageExtension}`)}`}
+  />
   <meta name="twitter:image:alt" content={altText} />
   {@html jsonldScript}
 </svelte:head>
