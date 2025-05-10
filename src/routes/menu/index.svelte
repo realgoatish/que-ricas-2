@@ -68,12 +68,21 @@
           value={title}>{title}</button
         >
       {/each}
+      <!-- {#each menu as item (item.number)}
+        <button
+          aria-label={`Click to reveal menu items from the ${item.title} section below`}
+          class:selected={$currentSection === item.title}
+          on:click={showMenuSection}
+          value={item.title}>{item.title}</button
+        >
+      {/each} -->
     </section>
   </Card>
   <div class:visible-block={$currentSection !== 0}>
     <Card>
       <MenuSection info={menu.sections.starters} />
       <MenuSection info={menu.sections.empanadas} />
+      <MenuSection info={menu.sections.fromTheGriddle} />
       <MenuSection info={menu.sections.arepas} />
       <MenuSection info={menu.sections.tacos} />
       <MenuSection info={menu.sections.platters} />

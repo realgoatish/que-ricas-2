@@ -1,5 +1,5 @@
 ---
-number: 10
+number: 7
 itemName: 'Make it a combo! '
 price: $3
 description: >-
