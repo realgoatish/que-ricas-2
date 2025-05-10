@@ -2,6 +2,7 @@ import arepasContent from "./../../../markdowns/menu/arepa-lab/*.md";
 import churrosContent from "./../../../markdowns/menu/churros/**/*.md";
 import drinksContent from "./../../../markdowns/menu/drinks/*.md";
 import empanadasContent from "./../../../markdowns/menu/empanadas/*.md";
+import fromTheGriddleContent from "./../../../markdowns/menu/from-the-griddle/*.md";
 import plattersContent from "./../../../markdowns/menu/platters/**/*.md";
 import sidesAndExtrasContent from "./../../../markdowns/menu/sides-and-extras/*.md";
 import specialsContent from "./../../../markdowns/menu/specials/*.md";
@@ -60,22 +61,25 @@ const arepas = transform(arepasContent);
 const churros = transform(churrosContent);
 const drinks = transform(drinksContent);
 const empanadas = transform(empanadasContent);
+const fromTheGriddle = transform(fromTheGriddleContent);
 const platters = transform(plattersContent);
 const sidesAndExtras = transform(sidesAndExtrasContent);
 const specials = transform(specialsContent);
 const starters = transform(startersContent);
 const tacos = transform(tacosContent);
 
+// this is where you're controlling order of menu sections on the front end :/
 const allSections = [
   ...starters,
   ...empanadas,
+  ...fromTheGriddle,
   ...arepas,
+  ...tacos,
   ...platters,
   ...churros,
   ...sidesAndExtras,
   ...drinks,
-  ...specials,
-  ...tacos,
+  // ...specials,
 ];
 
 function getTitle(section) {
@@ -100,6 +104,7 @@ export const menu = {
   sections: {
     starters: starters,
     empanadas: empanadas,
+    fromTheGriddle: fromTheGriddle,
     arepas: arepas,
     tacos: tacos,
     platters: platters,
@@ -112,9 +117,12 @@ export const menu = {
     description:
       "Authentic empanadas, arepas, pabellon bowls, churros, local specialties, gluten free and vegan options in Haddon Township, NJ",
     image:
-      platters[platters.findIndex((x) => x.itemName === "Pabellón")]
-        .productImage,
+      platters[
+        platters.findIndex((x) => x.itemName === "Shredded Chicken Pabellón")
+      ].productImage,
     altText:
-      platters[platters.findIndex((x) => x.itemName === "Pabellón")].altText,
+      platters[
+        platters.findIndex((x) => x.itemName === "Shredded Chicken Pabellón")
+      ].altText,
   },
 };

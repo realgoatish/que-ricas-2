@@ -1,6 +1,6 @@
 ---
 number: 1
-itemName: Mexican Coke, Sprite, or Fanta - Glass Bottle
+itemName: Bottle of Soda
 price: "$2.99"
 
 ---

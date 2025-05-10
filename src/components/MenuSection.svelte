@@ -9,7 +9,7 @@
 
   const getStepOne = (section, headers) => {
     let result;
-    if (headers.menuSectionTitle === "Platters") {
+    if (headers.menuSectionTitle === "Pabellón Platters") {
       result = section.filter((x) => x.itemName && !x.description);
     } else if (headers.menuSectionTitle === "Churros") {
       result = section.filter((x) => x.description);
@@ -19,7 +19,7 @@
 
   const getStepTwo = (section, headers) => {
     let result;
-    if (headers.menuSectionTitle === "Platters") {
+    if (headers.menuSectionTitle === "Pabellón Platters") {
       result = section.filter((x) => x.itemName && x.description);
     } else if (headers.menuSectionTitle === "Churros") {
       result = section.filter((x) => x.itemName && !x.description);
@@ -227,5 +227,4 @@
     width: 55%;
     margin: auto 0;
   }
-
 </style>

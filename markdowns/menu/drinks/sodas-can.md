@@ -1,6 +1,6 @@
 ---
 number: 5
-itemName: Coke or Diet Coke - Can
+itemName: Can of Soda
 price: $1.69
 ---
 

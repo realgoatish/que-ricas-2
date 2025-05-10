@@ -114,7 +114,7 @@ export default defineConfig({
       },
       {
         format: "md",
-        label: "Platters",
+        label: "Pabellón Platters",
         name: "platters",
         path: "markdowns/menu/platters",
         match: {
