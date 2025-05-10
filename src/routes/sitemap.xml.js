@@ -53,14 +53,14 @@ const render = (pages) => `<?xml version="1.0" encoding="UTF-8" ?>
   .map(
     (page) => `
   <url>
-    <loc>${BASE_URL}${page === "" ? page : "/" + page}</loc>
+    <loc>${BASE_URL}${page === "" ? page + "/" : "/" + page + "/"}</loc>
     <priority>0.85</priority>${getPageImages(page)
       .map(
         (img) => `
     <image:image>
       <image:loc>${BASE_URL}/images/${
           page === "" ? "home" : page
-        }/${img}</image:loc>
+        }/${img}/</image:loc>
     </image:image>`
       )
       .join("")}
