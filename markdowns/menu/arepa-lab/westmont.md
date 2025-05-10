@@ -1,5 +1,5 @@
 ---
-number: 3
+number: 2
 itemName: Westmont
 price: $11.50
 description: 'shredded beef, fried cheese, sabroso sauce, pico'
