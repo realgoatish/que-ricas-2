@@ -10,11 +10,23 @@
 
 <script>
   import Card from "./../../components/Card.svelte";
+  // TODO you may use the below component
+  // import BaseSEO from "../../components/BaseSEO.svelte";
 
   export let page;
 
   const [metadata] = page;
 </script>
+
+<!-- TODO - set up basic SEO w/ og:image; requires tweaking data returned in _order-online.js to add an 'seo' property -->
+<!-- <BaseSEO
+  title="Order Online"
+  description="Order online for in-store pickup, or delivery through Doordash or GrubHub"
+  canonical={`https://www.que-ricas.com${$page.path}`}
+  image={menu.seo.image}
+  imageExtension={"jpg"}
+  altText={menu.seo.altText}
+/> -->
 
 <article class="page-content">
   <!-- {JSON.stringify(page, null, 2)} -->
