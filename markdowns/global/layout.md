@@ -44,7 +44,7 @@ businessHours:
   - 'Tues - Sat:'
   - 11 AM - 8 PM
   - 'Sun:'
-  - 11 AM - 6 PM
+  - 12 PM - 6 PM
   - Closed Mon
 ---
 
