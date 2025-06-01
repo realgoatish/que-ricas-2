@@ -58,7 +58,7 @@ const render = (pages) => `<?xml version="1.0" encoding="UTF-8" ?>
       .map(
         (img) => `
     <image:image>
-      <image:loc>${BASE_URL}/images/${
+      <image:loc>${BASE_URL}/g/images/${
           page === "" ? "home" : page
         }/${img}/</image:loc>
     </image:image>`
