@@ -7,11 +7,7 @@
 
   export let orderOnline;
 
-  const navPages = [
-    { linkText: "Home", route: "/" },
-    { linkText: "Menu", route: "/menu/" },
-    { linkText: "Our Story", route: "/story/" },
-  ];
+  const navPages = [{ linkText: "Home", route: "/" }];
 
   let showMobileMenu = false;
 
@@ -151,7 +147,9 @@
     opacity: 1;
     transform: rotate(0) translateY(0) translateX(0);
     transform-origin: 1em 1em;
-    transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+    transition:
+      transform 0.3s ease-in-out,
+      opacity 0.2s ease-in-out;
   }
   .svg-menu-toggle .line-1 {
     transform-origin: 1em 2.5em;

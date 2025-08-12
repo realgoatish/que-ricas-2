@@ -9,26 +9,35 @@ hdImageAltText: Honestly Delicious. Local. Better Ingredients. Authentic.
 ---
 <br>
 
-# Authentic Venezuelan Cuisine 
+# Bold flavors. Warm welcomes. 
 
 <br>
 
-Bienvenidos! Welcome! Que Ricas brings to you authentic and locally inspired South American flavors, heavily influenced by Venezuelan cuisine. 
-
-<br>
-  
-We are a scratch kitchen specializing in Empanadas, Arepas, Pabellón Bowls, Seasonal Specials, Churros and more. There are many words to describe our menu: traditional, honest, intriguing, inspiring, rica...you just have to try it!
+At Que Ricas, we bring the best of Latin America to your plate - from Venezuelan comfort food to Mexican street food favorites, all made fresh in our scratch kitchen.
 
 <br>
 
-## Venezuelan Street Food in Westmont, New Jersey
-<br> 
-
-We are not your ordinary restaurant. We realize that as a business, we have a responsibility to contribute to our community. This purpose and responsibility translates into the ingredients we choose to cook with, the food we serve, what we package our To-Go foods in, and how we respect and treat our customers and community. 
+# Que Ricas - Latin Flavors Made with Love
 
 <br>
 
-We invite you to not only come and try our family's treasured recipes, but we also encourage you to ask us any questions you may have about our menu! We treat you and our community like the family that you are.
+¡Bienvenidos! Welcome to Que Ricas, your neighborhood restaurant bringing together the rich traditions and bold, colorful tastes of Latin America. 
+
+<br>
+
+We cook everything from scratch - juicy empanadas, fluffy arepas, sizzling tacos, hearty Pabellón bowls, fresh salsas, and specials inspired by the season. And yes… our churros are just as good as they smell.
+
+<br>
+
+# We’re here for more than just good food - we’re here for good company. 
+
+<br>
+
+That’s why we choose fresh, quality ingredients, pack every to-go order with care, and treat everyone who walks through our doors like part of the family.
+
+<br>
+
+So pull up a chair, try something new (or stick with your favorite), and let us share a little taste of Latin America with you.
 
 <br>
 <br>
