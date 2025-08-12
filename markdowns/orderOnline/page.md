@@ -3,7 +3,7 @@ title: Order Online
 options:
   - link: 
       text: "In-Store Pickup"
-      href: "https://www.clover.com/online-ordering/que-ricas"
+      href: "Website: https://www.clover.com/online-ordering/que-ricas-haddon-township"
   - link: 
       text: "DoorDash"
       href: "https://www.doordash.com/store/que-ricas-haddon-township-27547818/"
